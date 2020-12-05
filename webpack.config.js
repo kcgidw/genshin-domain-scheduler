@@ -1,8 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
 
 module.exports = (env = {}) => {
 	const prod = env.NODE_ENV === 'production';
@@ -37,7 +36,12 @@ module.exports = (env = {}) => {
 				},
 				{
 					test: /\.(sc|c)ss$/,
-					use: ['style-loader', 'css-loader', 'sass-loader'],
+					use: [
+						'style-loader',
+						'css-loader',
+						'postcss-loader',
+						'sass-loader',
+					],
 				},
 			],
 		},

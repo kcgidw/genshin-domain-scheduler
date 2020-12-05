@@ -1,4 +1,5 @@
-import 'normalize.css';
+// import 'normalize.css';
+import 'tailwindcss/tailwind.css';
 import './style/style.scss';
 import './index.html';
 import ReactDOM from 'react-dom';
