@@ -1,0 +1,16 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly",
+		"PRODUCTION": "readonly"
+	},
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module"
+	}
+}
