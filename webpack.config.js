@@ -43,6 +43,10 @@ module.exports = (env = {}) => {
 						'sass-loader',
 					],
 				},
+				{
+					test: /\.(png|jpg|gif|bmp)$/,
+					use: ['url-loader'],
+				},
 			],
 		},
 		optimization: {
