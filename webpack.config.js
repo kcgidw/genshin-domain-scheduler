@@ -13,7 +13,7 @@ module.exports = (env = {}) => {
 			path: path.resolve(__dirname, 'dist'),
 			filename: 'index.bundle.min.js',
 		},
-		devtool: prod ? undefined : 'source-map',
+		devtool: prod ? undefined : 'eval-cheap-source-map',
 		devServer: {
 			hot: true,
 			contentBase: './dist',
