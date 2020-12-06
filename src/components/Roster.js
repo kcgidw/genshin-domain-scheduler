@@ -25,7 +25,11 @@ const Roster = ({ selection = {}, onSelectionChange }) => {
 			);
 		});
 	};
-	return <div className="flex flex-row space-x-4">{renderItems()}</div>;
+	return (
+		<div className="">
+			<div className="flex flex-row space-x-4">{renderItems()}</div>
+		</div>
+	);
 };
 
 export default Roster;

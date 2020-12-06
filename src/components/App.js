@@ -27,8 +27,8 @@ const App = () => {
 	};
 
 	return (
-		<div>
-			<nav css="flex flex-row space-x-4">
+		<div className="flex flex-col h-full">
+			<nav className="flex-grow-0 flex flex-row space-x-4">
 				<ViewTabButton
 					isActive={view === Views.schedule}
 					onClick={() => {
@@ -46,7 +46,9 @@ const App = () => {
 					Configure
 				</ViewTabButton>
 			</nav>
-			{view === Views.schedule ? renderSchedule() : renderRoster()}
+			<div id="main" className="flex-grow grid p-16">
+				{view === Views.schedule ? renderSchedule() : renderRoster()}
+			</div>
 		</div>
 	);
 };

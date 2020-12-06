@@ -4,7 +4,7 @@ import CharacterImage from './CharacterImage';
 
 const CharacterButton = ({ data, isSelected, onToggle }) => {
 	const cns = cn(
-		'flex-grow-0 flex flex-col justify-between text-center p-1 w-24 h-30 border rounded-sm cursor-pointer',
+		'flex-grow-0 flex flex-col justify-between text-center p-3 w-24 h-30 border rounded-sm cursor-pointer',
 		{
 			'bg-green-300': isSelected,
 		}
