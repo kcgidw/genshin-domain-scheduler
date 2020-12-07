@@ -15,7 +15,7 @@ const App = () => {
 		setSelectedCharacters(data);
 	};
 	const renderSchedule = () => {
-		return <Schedule></Schedule>;
+		return <Schedule selection={selectedCharacters}></Schedule>;
 	};
 	const renderRoster = () => {
 		return (
@@ -27,7 +27,7 @@ const App = () => {
 	};
 
 	return (
-		<div className="flex flex-col h-full">
+		<div className="flex flex-col min-h-screen">
 			<nav className="flex-grow-0 flex flex-row space-x-4">
 				<ViewTabButton
 					isActive={view === Views.schedule}
@@ -49,6 +49,7 @@ const App = () => {
 			<div id="main" className="flex-grow grid p-16">
 				{view === Views.schedule ? renderSchedule() : renderRoster()}
 			</div>
+			<footer className="flex-grow-0">footer here</footer>
 		</div>
 	);
 };
