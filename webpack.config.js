@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = (env = {}) => {
@@ -23,7 +24,18 @@ module.exports = (env = {}) => {
 				{
 					test: /\.js$/,
 					exclude: /node_modules/,
-					use: ['source-map-loader', 'babel-loader'],
+					use: [
+						'source-map-loader',
+						{
+							loader: 'babel-loader',
+							options: {
+								plugins: [
+									!prod &&
+										require.resolve('react-refresh/babel'),
+								].filter(Boolean),
+							},
+						},
+					],
 				},
 				{
 					test: /\.html$/,
@@ -53,8 +65,9 @@ module.exports = (env = {}) => {
 			new webpack.DefinePlugin({
 				PRODUCTION: prod,
 			}),
-			new webpack.HotModuleReplacementPlugin(),
-		],
+			!prod && new webpack.HotModuleReplacementPlugin(),
+			!prod && new ReactRefreshPlugin(),
+		].filter(Boolean),
 	};
 
 	return config;
