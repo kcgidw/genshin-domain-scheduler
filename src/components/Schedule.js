@@ -1,5 +1,5 @@
 import React from 'react';
-import { byDay } from '../data/talentMats';
+import { getScheduledMatsForDay } from '../data'
 import MatCard from './MatCard';
 
 const dayTitle = {
@@ -24,36 +24,17 @@ const ColContent = ({ mats = [] }) => {
 };
 
 const Schedule = ({ selection = {} }) => {
-	const matHasApplicableCharacters = (mat) => {
-		return mat.characters.some((charaName) => selection[charaName]);
-	};
-	const getApplicableMats = (day) => {
-		return Object.values(byDay[day]).filter((mat) =>
-			matHasApplicableCharacters(mat)
-		);
-	};
 	const renderCols = () => {
-		return Object.keys(byDay).map((day) => {
-			return <ColHeader day={day} key={`${day}-header`}></ColHeader>;
-		});
-	};
-	const renderColContent = () => {
-		return Object.keys(byDay).map((day) => {
-			return (
-				<ColContent
-					key={`${day}-content`}
-					mats={getApplicableMats(day)}
-				/>
-			);
+		return Object.keys(dayTitle).map((day) => {
+			return <div key={day}><ColHeader day={day} key={`${day}-header`}></ColHeader><ColContent mats={getScheduledMatsForDay(day, selection)} key={day}></ColContent></div>;
 		});
 	};
 	return (
 		<div
 			id="schedule"
-			className="place-self-center grid grid-cols-3 h-full w-4/5 max-w-6xl divide-x border"
+			className="place-self-center grid grid-cols-3 space-x-4 h-full w-4/5 max-w-6xl divide-x border"
 		>
 			{renderCols()}
-			{renderColContent()}
 		</div>
 	);
 };
