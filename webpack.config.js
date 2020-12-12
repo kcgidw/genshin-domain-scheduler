@@ -14,7 +14,7 @@ module.exports = (env = {}) => {
 			path: path.resolve(__dirname, 'dist'),
 			filename: 'index.bundle.min.js',
 		},
-		devtool: prod ? undefined : 'eval-cheap-source-map',
+		devtool: prod ? undefined : 'source-map',
 		devServer: {
 			hot: true,
 			contentBase: './dist',
@@ -47,7 +47,7 @@ module.exports = (env = {}) => {
 					],
 				},
 				{
-					test: /\.(sc|c)ss$/,
+					test: /\.(sc|pc|c)ss$/,
 					use: ['style-loader', 'css-loader', 'postcss-loader'],
 				},
 				{

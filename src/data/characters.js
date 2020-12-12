@@ -1,11 +1,11 @@
 const map = {
 	amber: {},
-	fischl: {},
-	chongyun: {},
 	barbara: {},
 	beidou: {},
 	bennett: {},
+	chongyun: {},
 	diluc: {},
+	fischl: {},
 	kaeya: {},
 	jean: {},
 	keqing: {},

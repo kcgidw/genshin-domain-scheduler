@@ -51,4 +51,10 @@ const getMatData = (name) => {
 	return data;
 };
 
-export { getScheduledMatsForDay };
+const filterCharactersByMat = (charaSelectionSet, matName) => {
+	return Object.keys(charaSelectionSet).filter((charaName) => {
+		return getMatData(matName).characters.includes(charaName);
+	});
+};
+
+export { getScheduledMatsForDay, filterCharactersByMat };

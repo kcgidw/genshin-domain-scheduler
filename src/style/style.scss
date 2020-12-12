@@ -4,3 +4,16 @@ input[type='button'] {
 		outline: none;
 	}
 }
+
+@layer base {
+	h1,
+	h2,
+	h3 {
+		@apply text-gray-200;
+	}
+}
+
+body {
+	@apply bg-gray-800;
+	@apply text-gray-300;
+}
