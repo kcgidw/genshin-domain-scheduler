@@ -5,10 +5,10 @@ const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = (env = {}) => {
-	const prod = env.NODE_ENV === 'production';
+	const prod = env.production;
 
 	const config = {
-		mode: env.NODE_ENV || 'development',
+		mode: prod ? 'production' : 'development',
 		entry: [path.resolve(__dirname, 'src', 'index.js')],
 		output: {
 			path: path.resolve(__dirname, 'dist'),

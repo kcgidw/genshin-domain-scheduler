@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack src/index.js --env.NODE_ENV=production",
+		"build": "webpack src/index.js --env production",
+		"clean": "rm -rf node_modules/",
 		"dev": "webpack-dev-server",
 		"start": "serve dist/"
 	},
@@ -29,7 +30,7 @@
 		"html-loader": "^1.1.0",
 		"html-webpack-plugin": "^4.3.0",
 		"mini-css-extract-plugin": "^0.x",
-		"node-sass": "^4.x",
+		"node-sass": "^5.x",
 		"normalize.css": "^8.x",
 		"postcss": "^8.1.14",
 		"postcss-loader": "^4.1.0",
@@ -51,7 +52,7 @@
 		"@types/react-dom": "^17.0.0",
 		"cross-env": "^7.x.x",
 		"eslint": "^7.x.x",
-		"eslint-config-prettier": "^6.x.x",
+		"eslint-config-prettier": "^7.x",
 		"eslint-plugin-prettier": "^3.x.x",
 		"eslint-plugin-react": "^7.21.5",
 		"prettier": "^2.x.x",
