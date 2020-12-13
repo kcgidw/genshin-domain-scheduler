@@ -22,6 +22,13 @@ import xiangling from '../assets/xiangling.png';
 import xiao from '../assets/xiao.png';
 import xingqiu from '../assets/xingqiu.png';
 
+import freedom from '../assets/freedom.webp';
+import resistance from '../assets/resistance.webp';
+import ballad from '../assets/ballad.webp';
+import prosperity from '../assets/prosperity.png';
+import diligence from '../assets/diligence.png';
+import gold from '../assets/gold.png';
+
 const images = {
 	amber,
 	barbara,
@@ -45,6 +52,13 @@ const images = {
 	xiangling,
 	xiao,
 	xingqiu,
+	// talent
+	freedom,
+	resistance,
+	ballad,
+	prosperity,
+	diligence,
+	gold,
 };
 
 const CharacterImage = ({ name }) => {

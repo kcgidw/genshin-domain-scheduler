@@ -19,7 +19,7 @@ const map = {
 	sucrose: {},
 	venti: {},
 	xiangling: {},
-	xiao: {},
+	// xiao: {},
 	xingqiu: {},
 };
 

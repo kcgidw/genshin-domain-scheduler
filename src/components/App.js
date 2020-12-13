@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocalStorage } from 'react-use';
 import Roster from './Roster';
 import Schedule from './Schedule';
 import ViewTabButton from './ViewTabButton';
@@ -9,7 +10,10 @@ const Views = {
 };
 
 const App = () => {
-	const [selectedCharacters, setSelectedCharacters] = useState({});
+	const [selectedCharacters, setSelectedCharacters] = useLocalStorage(
+		'selectedCharacters',
+		{}
+	);
 	const [view, setView] = useState(Views.schedule);
 	const handleSelectionChange = (data) => {
 		setSelectedCharacters(data);
