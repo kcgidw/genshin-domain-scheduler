@@ -21,6 +21,8 @@ import venti from '../assets/venti.png';
 import xiangling from '../assets/xiangling.png';
 import xiao from '../assets/xiao.png';
 import xingqiu from '../assets/xingqiu.png';
+import xinyan from '../assets/xinyan.png';
+import zhongli from '../assets/zhongli.png';
 
 import freedom from '../assets/freedom.webp';
 import resistance from '../assets/resistance.webp';
@@ -52,6 +54,8 @@ const images = {
 	xiangling,
 	xiao,
 	xingqiu,
+	xinyan,
+	zhongli,
 	// talent
 	freedom,
 	resistance,

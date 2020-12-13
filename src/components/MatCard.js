@@ -16,7 +16,7 @@ const MatCard = ({ selection, data }) => {
 	};
 
 	const cns = cn({
-		'p-8 flex flex-row cursor-pointer transition-all hover:bg-gray-600': true,
+		'py-4 px-8 flex flex-row cursor-pointer transition-all hover:bg-gray-600': true,
 	});
 
 	return (
@@ -25,8 +25,8 @@ const MatCard = ({ selection, data }) => {
 				<CharacterImage name={data.name}></CharacterImage>
 			</div>
 			<div className="flex flex-col">
-				<div className="h-8">{data.name.toUpperCase()}</div>
-				<div className="h-8 flex flex-row flex-wrap">
+				<h4 className="h-8">{data.name.toUpperCase()}</h4>
+				<div className="h-8 flex flex-row flex-wrap relative -top-1">
 					{renderCharacters()}
 				</div>
 			</div>

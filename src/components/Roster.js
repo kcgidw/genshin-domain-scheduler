@@ -4,7 +4,6 @@ import CharacterButton from './CharacterButton';
 
 const Roster = ({ selection = {}, onSelectionChange }) => {
 	const renderItems = () => {
-		// todo useffect
 		return list.map((item) => {
 			const onToggle = () => {
 				const newSelection = { ...selection };
@@ -26,8 +25,10 @@ const Roster = ({ selection = {}, onSelectionChange }) => {
 		});
 	};
 	return (
-		<div className="">
-			<div className="flex flex-row flex-wrap">{renderItems()}</div>
+		<div className="max-w-6xl p-8 bg-gray-800 border-0 shadow">
+			<div className="flex flex-row flex-wrap justify-items-center">
+				{renderItems()}
+			</div>
 		</div>
 	);
 };

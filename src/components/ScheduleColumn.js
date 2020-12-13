@@ -11,7 +11,7 @@ const ColHeader = ({ day }) => {
 	);
 };
 
-const ScheduleColumn = ({ selection, day }) => {
+const ScheduleColumn = ({ selection, day, today }) => {
 	const ColContent = ({ mats = [] }) => {
 		const renderMats = () => {
 			return mats.map((mat) => (
@@ -22,11 +22,11 @@ const ScheduleColumn = ({ selection, day }) => {
 				></MatCard>
 			));
 		};
-		return <div className="flex flex-col">{renderMats()}</div>;
+		return <div className="flex flex-col pb-4">{renderMats()}</div>;
 	};
 
 	return (
-		<div key={day} className="bg-gray-800 border-0">
+		<div key={day} className="bg-gray-800 border-0 shadow">
 			<ColHeader day={day} key={`${day}-header`}></ColHeader>
 			<ColContent
 				mats={getScheduledMatsForDay(day, selection)}

@@ -1,15 +1,28 @@
 import React from 'react';
 import cn from 'classnames';
+import { useHover } from 'react-use';
 
-const ViewTabButton = ({ isActive, onClick, children }) => {
-	const cns = cn({
-		'bg-green-300': isActive,
-	});
-	return (
-		<button className={cns} onClick={onClick}>
-			{children}
-		</button>
-	);
+const ViewTabButton = ({ isActive, onClick, icon, label }) => {
+	const component = (isHovering) => {
+		const cns = cn(
+			' m-2 flex items-center space-x-1 text-xs font-mont transition-all',
+			{
+				'text-gray-200': isHovering || isActive,
+			}
+		);
+		const iconCns = cn(' transition-all', {
+			'text-gray-500': !isHovering && !isActive,
+			'text-gray-200': isHovering || isActive,
+		});
+		return (
+			<button className={cns} onClick={onClick}>
+				<span className={iconCns}>{icon}</span>
+				<span>{label.toUpperCase()}</span>
+			</button>
+		);
+	};
+	const [hoverable] = useHover(component);
+	return <>{hoverable}</>;
 };
 
 export default ViewTabButton;

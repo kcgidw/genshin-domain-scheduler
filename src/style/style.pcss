@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+button,
+input[type='button'] {
+	&:focus {
+		outline: none;
+	}
+}
+
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply text-gray-300;
+		font-family: Montserrat, ui-sans-serif;
+	}
+
+	h1 {
+		@apply text-2xl;
+	}
+	h2 {
+		@apply text-xl;
+	}
+	h3 {
+		@apply text-lg;
+	}
+	h4 {
+		@apply text-gray-400;
+	}
+}
+
+body {
+	@apply bg-gray-900;
+	@apply text-gray-400;
+	background: linear-gradient(180deg, #111827 75%, rgb(9 30 43) 100%);
+}
+
+a {
+	@apply underline;
+	@apply text-blue-300;
+	@apply transition-all;
+	@apply hover:text-blue-200;
+}
+
+img {
+	image-rendering: -webkit-optimize-contrast;
+	/* image-rendering: crisp-edges; */
+}

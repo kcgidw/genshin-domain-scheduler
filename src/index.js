@@ -1,6 +1,6 @@
 // import 'normalize.css';
 import 'tailwindcss/tailwind.css';
-import './style/style.scss';
+import './style/style.pcss';
 import './index.html';
 import ReactDOM from 'react-dom';
 import React from 'react';
