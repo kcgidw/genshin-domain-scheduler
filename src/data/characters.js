@@ -21,6 +21,8 @@ const map = {
 	xiangling: {},
 	// xiao: {},
 	xingqiu: {},
+	xinyan: {},
+	zhongli: {},
 };
 
 Object.keys(map).forEach((key) => {
