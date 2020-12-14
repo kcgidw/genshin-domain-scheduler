@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import CharacterImage from './CharacterImage';
-import startCase from 'lodash/startCase';
+import { cap } from '../util';
 
 const CharacterButton = ({ data, isSelected, onToggle }) => {
 	const cns = cn(
@@ -16,7 +16,7 @@ const CharacterButton = ({ data, isSelected, onToggle }) => {
 			<div className="h-12 flex justify-center">
 				<CharacterImage name={data.name}></CharacterImage>
 			</div>
-			<span>{startCase(data.name)}</span>
+			<span>{cap(data.name)}</span>
 		</div>
 	);
 };

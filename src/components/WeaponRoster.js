@@ -1,10 +1,10 @@
 import React from 'react';
-import { getAllCharacters } from '../data';
-import CharacterButton from './CharacterButton';
+import { getAllWeapons } from '../data';
+import WeaponButton from './WeaponButton';
 
-const Roster = ({ selection = {}, onSelectionChange }) => {
+const WeaponRoster = ({ selection = {}, onSelectionChange }) => {
 	const renderItems = () => {
-		return getAllCharacters().map((item) => {
+		return getAllWeapons().map((item) => {
 			const onToggle = () => {
 				const newSelection = { ...selection };
 				if (selection[item.name]) {
@@ -15,22 +15,20 @@ const Roster = ({ selection = {}, onSelectionChange }) => {
 				onSelectionChange(newSelection);
 			};
 			return (
-				<CharacterButton
+				<WeaponButton
 					data={item}
 					key={item.name}
 					isSelected={selection[item.name]}
 					onToggle={onToggle}
-				></CharacterButton>
+				></WeaponButton>
 			);
 		});
 	};
 	return (
 		<div className="p-8 bg-gray-800 border-0 shadow">
-			<div className="flex flex-row flex-wrap justify-items-center">
-				{renderItems()}
-			</div>
+			<div className="flex flex-row flex-wrap">{renderItems()}</div>
 		</div>
 	);
 };
 
-export default Roster;
+export default WeaponRoster;

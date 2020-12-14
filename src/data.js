@@ -2,6 +2,8 @@ import talentMats from './data/talentMats';
 import weaponMats from './data/weaponMats';
 import memoize from 'lodash/memoize';
 import domains from './data/domains';
+import characters from './data/characters';
+import weapons from './data/weapons';
 
 const getDomain = memoize((matName) => {
 	return Object.keys(domains).find((domainName) => {
@@ -22,7 +24,10 @@ Object.values(domains).forEach((domData) => {
 });
 
 const doesMatApplyToCharacters = (matData, characters) => {
-	return matData.characters.some((charaName) => characters[charaName]);
+	return (
+		matData.characters &&
+		matData.characters.some((charaName) => characters[charaName])
+	);
 };
 
 /**
@@ -59,4 +64,21 @@ const filterCharactersByMat = (charaSelectionSet, matName) => {
 		.sort();
 };
 
-export { getScheduledMatsForDay, filterCharactersByMat };
+const allCharacters = Object.values(characters);
+const getAllCharacters = () => {
+	return allCharacters;
+};
+
+const allWeapons = Object.keys(weapons)
+	.sort()
+	.map((wKey) => weapons[wKey]);
+const getAllWeapons = () => {
+	return allWeapons;
+};
+
+export {
+	getAllCharacters,
+	getAllWeapons,
+	getScheduledMatsForDay,
+	filterCharactersByMat,
+};

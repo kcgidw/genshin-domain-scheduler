@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useLocalStorage } from 'react-use';
-import Roster from './Roster';
 import Schedule from './Schedule';
 import ViewTabButton from './ViewTabButton';
 import { Calendar, Info, Users } from 'react-feather';
 import About from './About';
+import Configure from './Configure';
 
 const Views = {
 	schedule: 'schedule',
@@ -19,13 +19,22 @@ const NavButtonIcons = {
 };
 
 const App = () => {
+	const [view, setView] = useState(Views.schedule);
+
 	const [selectedCharacters, setSelectedCharacters] = useLocalStorage(
 		'selectedCharacters',
 		{}
 	);
-	const [view, setView] = useState(Views.schedule);
-	const handleSelectionChange = (data) => {
+	const [selectedWeapons, setSelectedWeapons] = useLocalStorage(
+		'selectedWeapons',
+		{}
+	);
+
+	const handleCharacterSelectionChange = (data) => {
 		setSelectedCharacters(data);
+	};
+	const handleWeaponSelectionChange = (data) => {
+		setSelectedWeapons(data);
 	};
 
 	const renderView = () => {
@@ -34,10 +43,14 @@ const App = () => {
 				return <Schedule selection={selectedCharacters}></Schedule>;
 			case Views.configure:
 				return (
-					<Roster
-						selection={selectedCharacters}
-						onSelectionChange={handleSelectionChange}
-					></Roster>
+					<Configure
+						selectedCharacters={selectedCharacters}
+						selectedWeapons={selectedWeapons}
+						onCharacterSelectionChange={
+							handleCharacterSelectionChange
+						}
+						onWeaponSelectionChange={handleWeaponSelectionChange}
+					></Configure>
 				);
 			case Views.about:
 				return <About />;
@@ -64,7 +77,7 @@ const App = () => {
 
 	return (
 		<div className="flex flex-col min-h-screen">
-			<nav className="flex-grow-0 p-2 flex flex-row space-x-4">
+			<nav className="flex-grow-0 p-2 flex flex-row">
 				{renderNavButtons()}
 			</nav>
 			<div id="main" className="flex-grow grid p-16">

@@ -5,7 +5,7 @@ import { useHover } from 'react-use';
 const ViewTabButton = ({ isActive, onClick, icon, label }) => {
 	const component = (isHovering) => {
 		const cns = cn(
-			' m-2 flex items-center space-x-1 text-xs font-mont transition-all',
+			'my-1 mx-3 flex items-center space-x-1 text-xs font-mont transition-all',
 			{
 				'text-gray-200': isHovering || isActive,
 			}
