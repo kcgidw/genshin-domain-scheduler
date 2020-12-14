@@ -31,6 +31,13 @@ import prosperity from '../assets/prosperity.png';
 import diligence from '../assets/diligence.png';
 import gold from '../assets/gold.png';
 
+import boreal from '../assets/boreal.webp';
+import decarabian from '../assets/decarabian.webp';
+import dandelion from '../assets/dandelion gladiator.webp';
+import guyun from '../assets/guyun.webp';
+import elixir from '../assets/elixir.webp';
+import aerosiderite from '../assets/aerosiderite.webp';
+
 const images = {
 	amber,
 	barbara,
@@ -63,6 +70,13 @@ const images = {
 	prosperity,
 	diligence,
 	gold,
+	// weapon
+	boreal,
+	decarabian,
+	'dandelion gladiator': dandelion,
+	elixir,
+	guyun,
+	aerosiderite,
 };
 
 const CharacterImage = ({ name }) => {

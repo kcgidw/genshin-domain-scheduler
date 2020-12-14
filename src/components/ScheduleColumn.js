@@ -1,5 +1,9 @@
 import React from 'react';
-import { getScheduledMatsForDay } from '../data';
+import {
+	getScheduledMatsForDay,
+	getSelectedCharactersForMat,
+	getSelectedWeaponsForMat,
+} from '../data';
 import { getTitle } from '../days';
 import MatCard from './MatCard';
 
@@ -11,25 +15,38 @@ const ColHeader = ({ day }) => {
 	);
 };
 
-const ScheduleColumn = ({ selection, day, today }) => {
+const ScheduleColumn = ({
+	selectedCharacters,
+	selectedWeapons,
+	day,
+	today,
+}) => {
 	const ColContent = ({ mats = [] }) => {
 		const renderMats = () => {
 			return mats.map((mat) => (
 				<MatCard
-					selection={selection}
+					characters={getSelectedCharactersForMat(
+						selectedCharacters,
+						mat
+					)}
+					weapons={getSelectedWeaponsForMat(selectedWeapons, mat)}
 					data={mat}
 					key={mat.name}
 				></MatCard>
 			));
 		};
-		return <div className="flex flex-col pb-4">{renderMats()}</div>;
+		return <div className="pb-4">{renderMats()}</div>;
 	};
 
 	return (
 		<div key={day} className="bg-gray-800 border-0 shadow">
 			<ColHeader day={day} key={`${day}-header`}></ColHeader>
 			<ColContent
-				mats={getScheduledMatsForDay(day, selection)}
+				mats={getScheduledMatsForDay(
+					day,
+					selectedCharacters,
+					selectedWeapons
+				)}
 				key={day}
 			></ColContent>
 		</div>

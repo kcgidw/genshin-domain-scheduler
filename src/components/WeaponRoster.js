@@ -26,6 +26,7 @@ const WeaponRoster = ({ selection = {}, onSelectionChange }) => {
 	};
 	return (
 		<div className="p-8 bg-gray-800 border-0 shadow">
+			<h1>Weapons</h1>
 			<div className="flex flex-row flex-wrap">{renderItems()}</div>
 		</div>
 	);

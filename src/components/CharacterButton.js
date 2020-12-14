@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import CharacterImage from './CharacterImage';
+import Image from './Image';
 import { cap } from '../util';
 
 const CharacterButton = ({ data, isSelected, onToggle }) => {
@@ -14,7 +14,7 @@ const CharacterButton = ({ data, isSelected, onToggle }) => {
 	return (
 		<div className={cns} onClick={onToggle}>
 			<div className="h-12 flex justify-center">
-				<CharacterImage name={data.name}></CharacterImage>
+				<Image name={data.name}></Image>
 			</div>
 			<span>{cap(data.name)}</span>
 		</div>

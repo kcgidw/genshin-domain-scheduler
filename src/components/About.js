@@ -6,8 +6,8 @@ const About = () => {
 			<h1>Genshin Domain Scheduler</h1>
 			<p>GDS is a simple domain schedule generator for Genshin Impact.</p>
 			<p>
-				Looking for more fleshed-out features? Try some of these fellow
-				fansites:
+				Looking for something with more features? Check out some of
+				these fellow fansites:
 				<ul className="list-disc list-inside">
 					<li>
 						<a href="https://genshin.poporing.life/">

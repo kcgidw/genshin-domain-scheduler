@@ -1,17 +1,32 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cn from 'classnames';
-import { filterCharactersByMat } from '../data';
-import CharacterImage from './CharacterImage';
+import Image from './Image';
+import { cap } from '../util';
 
-const MatCard = ({ selection, data }) => {
+const MatCard = ({ data, characters = [], weapons = [] }) => {
 	const renderCharacters = () => {
-		return filterCharactersByMat(selection, data.name).map((charaName) => {
+		const inner = characters.map((charaName) => {
 			return (
-				<CharacterImage
-					name={charaName}
-					key={charaName}
-				></CharacterImage>
+				<span className="h-8 mr-1" key={charaName}>
+					<Image name={charaName}></Image>
+				</span>
 			);
+		});
+		return (
+			<div className="flex flex-row flex-wrap relative -top-1">
+				{inner}
+			</div>
+		);
+	};
+	const renderWeapons = () => {
+		return weapons.map((name) => {
+			const inner = (
+				<div className="text-xs" key={name}>
+					{cap(name)}
+				</div>
+			);
+			return <div>{inner}</div>;
 		});
 	};
 
@@ -22,16 +37,20 @@ const MatCard = ({ selection, data }) => {
 	return (
 		<div className={cns}>
 			<div className="h-16 w-16 mr-4 flex-shrink-0">
-				<CharacterImage name={data.name}></CharacterImage>
+				<Image name={data.name}></Image>
 			</div>
 			<div className="flex flex-col">
-				<h4 className="h-8">{data.name.toUpperCase()}</h4>
-				<div className="h-8 flex flex-row flex-wrap relative -top-1">
-					{renderCharacters()}
-				</div>
+				<h4>{data.name.toUpperCase()}</h4>
+				{renderCharacters()}
+				{renderWeapons()}
 			</div>
 		</div>
 	);
+};
+MatCard.propTypes = {
+	data: PropTypes.object.isRequired,
+	characters: PropTypes.array,
+	weapons: PropTypes.array,
 };
 
 export default MatCard;

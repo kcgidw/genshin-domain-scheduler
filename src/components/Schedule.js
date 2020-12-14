@@ -2,13 +2,14 @@ import React from 'react';
 import ScheduleColumn from './ScheduleColumn';
 import * as days from '../days';
 
-const Schedule = ({ selection = {} }) => {
+const Schedule = ({ selectedCharacters, selectedWeapons }) => {
 	const renderCols = () => {
 		return days.list.map((day) => {
 			return (
 				<ScheduleColumn
 					day={day}
-					selection={selection}
+					selectedCharacters={selectedCharacters}
+					selectedWeapons={selectedWeapons}
 					key={day}
 				></ScheduleColumn>
 			);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocalStorage } from 'react-use';
 import Schedule from './Schedule';
 import ViewTabButton from './ViewTabButton';
@@ -40,7 +40,12 @@ const App = () => {
 	const renderView = () => {
 		switch (view) {
 			case Views.schedule:
-				return <Schedule selection={selectedCharacters}></Schedule>;
+				return (
+					<Schedule
+						selectedCharacters={selectedCharacters}
+						selectedWeapons={selectedWeapons}
+					></Schedule>
+				);
 			case Views.configure:
 				return (
 					<Configure

@@ -23,25 +23,29 @@ Object.values(domains).forEach((domData) => {
 	matsByDay.wedsat[domData.dropSchedule.wedsat] = true;
 });
 
-const doesMatApplyToCharacters = (matData, characters) => {
+// Returns true when mat is applicable for any chara in selection
+const doesTalentMatApply = (matData, selection) => {
 	return (
 		matData.characters &&
-		matData.characters.some((charaName) => characters[charaName])
+		matData.characters.some((charaName) => selection[charaName])
+	);
+};
+const doesWeaponMatApply = (matData, selection) => {
+	return (
+		matData.weapons &&
+		Object.keys(matData.weapons).some((charaName) => selection[charaName])
 	);
 };
 
-/**
- *
- * @param {string} day
- * @param {Object} characters - set of chara names
- * @returns {Array} - arr of matDatas
- */
-const getScheduledMatsForDay = (day, characters) => {
+const getScheduledMatsForDay = (day, characters, weapons) => {
 	return Object.keys(matsByDay[day])
 		.filter((matName) => {
 			const matData = getMatData(matName);
 			if (matData) {
-				return doesMatApplyToCharacters(matData, characters);
+				return (
+					doesTalentMatApply(matData, characters) ||
+					doesWeaponMatApply(matData, weapons)
+				);
 			}
 			return false;
 		})
@@ -56,10 +60,18 @@ const getMatData = (name) => {
 	return data;
 };
 
-const filterCharactersByMat = (charaSelectionSet, matName) => {
+const getSelectedCharactersForMat = (charaSelectionSet, matData) => {
 	return Object.keys(charaSelectionSet)
 		.filter((charaName) => {
-			return getMatData(matName).characters.includes(charaName);
+			return matData.characters && matData.characters.includes(charaName);
+		})
+		.sort();
+};
+
+const getSelectedWeaponsForMat = (weaponSet, matData) => {
+	return Object.keys(weaponSet)
+		.filter((name) => {
+			return matData.weapons && matData.weapons[name];
 		})
 		.sort();
 };
@@ -80,5 +92,6 @@ export {
 	getAllCharacters,
 	getAllWeapons,
 	getScheduledMatsForDay,
-	filterCharactersByMat,
+	getSelectedCharactersForMat,
+	getSelectedWeaponsForMat,
 };
