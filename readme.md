@@ -1,6 +1,6 @@
 # Genshin Domain Scheduler
 
-Dead-simple domain schedule generator for Genshin Impact.
+Dead-simple personalized domain schedules for Genshin Impact.
 
 Work in progress.
 

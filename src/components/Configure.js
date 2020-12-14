@@ -11,7 +11,7 @@ const Configure = ({
 	return (
 		<div
 			id="configure"
-			className="justify-self-center max-w-4xl flex flex-col space-y-8"
+			className="m-auto max-w-4xl flex flex-col space-y-8"
 		>
 			<Roster
 				selection={selectedCharacters}

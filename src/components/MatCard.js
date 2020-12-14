@@ -13,20 +13,12 @@ const MatCard = ({ data, characters = [], weapons = [] }) => {
 				</span>
 			);
 		});
-		return (
-			<div className="flex flex-row flex-wrap relative -top-1">
-				{inner}
-			</div>
-		);
+		return <div className="flex flex-row flex-wrap">{inner}</div>;
 	};
 	const renderWeapons = () => {
 		return weapons.map((name) => {
-			const inner = (
-				<div className="text-xs" key={name}>
-					{cap(name)}
-				</div>
-			);
-			return <div>{inner}</div>;
+			const inner = <div className="text-xs">{cap(name)}</div>;
+			return <div key={name}>{inner}</div>;
 		});
 	};
 

@@ -19,7 +19,7 @@ const Schedule = ({ selectedCharacters, selectedWeapons }) => {
 	return (
 		<div
 			id="schedule"
-			className="place-self-center grid grid-cols-3 gap-x-4 h-full max-w-6xl"
+			className="m-auto grid grid-cols-3 gap-x-4 max-w-6xl"
 		>
 			{renderCols()}
 		</div>
