@@ -13,7 +13,7 @@ input[type='button'] {
 	h3,
 	h4 {
 		@apply text-gray-300;
-		font-family: Montserrat, ui-sans-serif;
+		@apply font-mont;
 	}
 
 	h1 {
@@ -28,6 +28,8 @@ input[type='button'] {
 	}
 	h4 {
 		@apply text-gray-400;
+		@apply leading-4;
+		@apply mt-1 mb-2;
 	}
 }
 
@@ -35,6 +37,12 @@ body {
 	@apply bg-gray-900;
 	@apply text-gray-400;
 	background: linear-gradient(180deg, #111827 75%, rgb(9 30 43) 100%);
+	height: 100vh;
+}
+
+#app {
+	height: 100vh;
+	overflow-y: auto;
 }
 
 a {
@@ -50,4 +58,8 @@ p {
 img {
 	image-rendering: -webkit-optimize-contrast;
 	/* image-rendering: crisp-edges; */
+}
+
+li::marker {
+	@apply text-gray-600;
 }

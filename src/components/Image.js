@@ -80,7 +80,7 @@ const images = {
 };
 
 const CharacterImage = ({ name }) => {
-	return <img className="h-full" src={images[name]}></img>;
+	return <img className="h-full object-contain" src={images[name]}></img>;
 };
 
 export default CharacterImage;

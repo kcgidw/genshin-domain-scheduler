@@ -26,7 +26,7 @@ const Roster = ({ selection = {}, onSelectionChange }) => {
 	};
 	return (
 		<div className="p-8 bg-gray-800 border-0 shadow">
-			<h1>Characters</h1>
+			<h1 className="font-sans">Characters</h1>
 			<div className="flex flex-row flex-wrap justify-items-center">
 				{renderItems()}
 			</div>

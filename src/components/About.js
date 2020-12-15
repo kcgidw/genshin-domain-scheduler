@@ -2,14 +2,14 @@ import React from 'react';
 
 const About = () => {
 	return (
-		<div id="about" className="max-w-2xl">
+		<div id="about" className="m-auto max-w-2xl">
 			<h1>Genshin Domain Scheduler</h1>
 			<p>Dead-simple personalized domain schedules for Genshin Impact.</p>
 			<p>
 				Use the <strong>Configure</strong> section to add characters and
 				weapons, and the app will update the <strong>Schedule</strong>{' '}
-				view with the relevant daily-domain talent and weapon ascension
-				materials.
+				view with the relevant daily-domain materials for talents and
+				weapons.
 			</p>
 			<p>
 				In the <strong>Schedule</strong> view, click on materials to see

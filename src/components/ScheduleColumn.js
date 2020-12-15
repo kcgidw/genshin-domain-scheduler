@@ -10,7 +10,7 @@ import MatCard from './MatCard';
 const ColHeader = ({ day }) => {
 	return (
 		<div className="p-8 grid place-content-center">
-			<h1>{getTitle(day)}</h1>
+			<h1 className="m-0">{getTitle(day)}</h1>
 		</div>
 	);
 };
@@ -35,11 +35,14 @@ const ScheduleColumn = ({
 				></MatCard>
 			));
 		};
-		return <div className="pb-4">{renderMats()}</div>;
+		return <div className="pb-8">{renderMats()}</div>;
 	};
 
 	return (
-		<div key={day} className="bg-gray-800 border-0 shadow">
+		<div
+			key={day}
+			className="max-w-xs flex-grow bg-gray-800 border-0 shadow"
+		>
 			<ColHeader day={day} key={`${day}-header`}></ColHeader>
 			<ColContent
 				mats={getScheduledMatsForDay(

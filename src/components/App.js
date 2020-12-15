@@ -85,7 +85,7 @@ const App = () => {
 			<nav className="flex-grow-0 p-2 flex flex-row">
 				{renderNavButtons()}
 			</nav>
-			<div id="main" className="flex-grow p-16">
+			<div id="main" className="flex-grow p-8">
 				{renderView()}
 			</div>
 			<footer className="flex-grow-0 p-2 text-xs text-gray-500">

@@ -8,7 +8,7 @@ const MatCard = ({ data, characters = [], weapons = [] }) => {
 	const renderCharacters = () => {
 		const inner = characters.map((charaName) => {
 			return (
-				<span className="h-8 mr-1" key={charaName}>
+				<span className="h-8" key={charaName}>
 					<Image name={charaName}></Image>
 				</span>
 			);
@@ -17,8 +17,14 @@ const MatCard = ({ data, characters = [], weapons = [] }) => {
 	};
 	const renderWeapons = () => {
 		return weapons.map((name) => {
-			const inner = <div className="text-xs">{cap(name)}</div>;
-			return <div key={name}>{inner}</div>;
+			const inner = (
+				<li className="text-xs tracking-wide">{cap(name)}</li>
+			);
+			return (
+				<ul className="ml-4 list-disc" key={name}>
+					{inner}
+				</ul>
+			);
 		});
 	};
 
@@ -31,7 +37,7 @@ const MatCard = ({ data, characters = [], weapons = [] }) => {
 			<div className="h-16 w-16 mr-4 flex-shrink-0">
 				<Image name={data.name}></Image>
 			</div>
-			<div className="flex flex-col">
+			<div className="flex flex-col flex-grow">
 				<h4>{data.name.toUpperCase()}</h4>
 				{renderCharacters()}
 				{renderWeapons()}
