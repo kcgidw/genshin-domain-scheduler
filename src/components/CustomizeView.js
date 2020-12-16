@@ -2,7 +2,7 @@ import React from 'react';
 import Roster from './Roster';
 import WeaponRoster from './WeaponRoster';
 
-const Configure = ({
+const CustomizeView = ({
 	selectedCharacters,
 	selectedWeapons,
 	onCharacterSelectionChange,
@@ -25,4 +25,4 @@ const Configure = ({
 	);
 };
 
-export default Configure;
+export default CustomizeView;

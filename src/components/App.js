@@ -4,17 +4,17 @@ import Schedule from './Schedule';
 import ViewTabButton from './ViewTabButton';
 import { Calendar, Info, Users } from 'react-feather';
 import About from './About';
-import Configure from './Configure';
+import CustomizeView from './CustomizeView';
 
 const Views = {
 	schedule: 'schedule',
-	configure: 'configure',
+	customize: 'customize',
 	about: 'about',
 };
 
 const NavButtonIcons = {
 	[Views.schedule]: <Calendar size={16}></Calendar>,
-	[Views.configure]: <Users size={16} />,
+	[Views.customize]: <Users size={16} />,
 	[Views.about]: <Info size={16} />,
 };
 
@@ -46,16 +46,16 @@ const App = () => {
 						selectedWeapons={selectedWeapons}
 					></Schedule>
 				);
-			case Views.configure:
+			case Views.customize:
 				return (
-					<Configure
+					<CustomizeView
 						selectedCharacters={selectedCharacters}
 						selectedWeapons={selectedWeapons}
 						onCharacterSelectionChange={
 							handleCharacterSelectionChange
 						}
 						onWeaponSelectionChange={handleWeaponSelectionChange}
-					></Configure>
+					></CustomizeView>
 				);
 			case Views.about:
 				return <About />;

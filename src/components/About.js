@@ -6,10 +6,10 @@ const About = () => {
 			<h1>Genshin Domain Scheduler</h1>
 			<p>Dead-simple personalized domain schedules for Genshin Impact.</p>
 			<p>
-				Use the <strong>Configure</strong> section to add characters and
-				weapons, and the app will update the <strong>Schedule</strong>{' '}
-				view with the relevant daily-domain materials for talents and
-				weapons.
+				Use the <strong>Customize</strong> view to add characters and
+				weapons. The <strong>Schedule</strong> view will automatically
+				update itself to show the relevant daily-domain materials for
+				talents and weapons.
 			</p>
 			<p>
 				In the <strong>Schedule</strong> view, click on materials to see
