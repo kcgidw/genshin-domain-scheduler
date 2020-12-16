@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useLocalStorage } from 'react-use';
+import { useLocalStorage, useMedia } from 'react-use';
 import Schedule from './Schedule';
+import TabbedSchedule from './TabbedSchedule';
 import ViewTabButton from './ViewTabButton';
 import { Calendar, Info, Users } from 'react-feather';
 import About from './About';
@@ -20,6 +21,7 @@ const NavButtonIcons = {
 
 const App = () => {
 	const [view, setView] = useState(Views.schedule);
+	const isWide = useMedia('(min-width: 640px)');
 
 	const [selectedCharacters, setSelectedCharacters] = useLocalStorage(
 		'selectedCharacters',
@@ -40,11 +42,19 @@ const App = () => {
 	const renderView = () => {
 		switch (view) {
 			case Views.schedule:
+				if (isWide) {
+					return (
+						<Schedule
+							selectedCharacters={selectedCharacters}
+							selectedWeapons={selectedWeapons}
+						></Schedule>
+					);
+				}
 				return (
-					<Schedule
+					<TabbedSchedule
 						selectedCharacters={selectedCharacters}
 						selectedWeapons={selectedWeapons}
-					></Schedule>
+					></TabbedSchedule>
 				);
 			case Views.customize:
 				return (
@@ -85,7 +95,7 @@ const App = () => {
 			<nav className="flex-grow-0 p-2 flex flex-row">
 				{renderNavButtons()}
 			</nav>
-			<div id="main" className="flex-grow md:p-8">
+			<div id="main" className="flex-grow md:p-8 md:pt-12">
 				{renderView()}
 			</div>
 			<footer className="flex-grow-0 p-2 text-xs text-gray-500">

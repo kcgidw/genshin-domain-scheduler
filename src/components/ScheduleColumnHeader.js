@@ -33,7 +33,7 @@ const renderDayTitle = (dayTuple, todayIdx) => {
 				</>
 			);
 		default:
-			console.warn(`Invalid day ${dayIdx}`);
+			console.warn(`Invalid day ${dayTuple}`);
 	}
 };
 

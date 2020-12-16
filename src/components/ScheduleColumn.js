@@ -1,47 +1,25 @@
 import React from 'react';
-import {
-	getScheduledMatsForDay,
-	getSelectedCharactersForMat,
-	getSelectedWeaponsForMat,
-} from '../data';
+import { getScheduledMatsForDay } from '../data';
+import ScheduleColumnContent from './ScheduleColumnContent';
 import ScheduleColumnHeader from './ScheduleColumnHeader';
-import MatCard from './MatCard';
 
 const ScheduleColumn = ({ selectedCharacters, selectedWeapons, day }) => {
-	const ColContent = ({ mats = [] }) => {
-		const renderMats = () => {
-			return mats.map((mat) => (
-				<MatCard
-					characters={getSelectedCharactersForMat(
-						selectedCharacters,
-						mat
-					)}
-					weapons={getSelectedWeaponsForMat(selectedWeapons, mat)}
-					data={mat}
-					key={mat.name}
-				></MatCard>
-			));
-		};
-		return <div className="pb-8">{renderMats()}</div>;
-	};
-
 	return (
-		<div
-			key={day}
-			className="max-w-xs flex-grow bg-gray-800  border-0 shadow overflow-hidden"
-		>
+		<div key={day} className="max-w-xs flex-1 section-card">
 			<ScheduleColumnHeader
 				day={day}
 				key={`${day}-header`}
 			></ScheduleColumnHeader>
-			<ColContent
+			<ScheduleColumnContent
+				selectedCharacters={selectedCharacters}
+				selectedWeapons={selectedWeapons}
 				mats={getScheduledMatsForDay(
 					day,
 					selectedCharacters,
 					selectedWeapons
 				)}
 				key={day}
-			></ColContent>
+			></ScheduleColumnContent>
 		</div>
 	);
 };
