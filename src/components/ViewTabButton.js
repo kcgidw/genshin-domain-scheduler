@@ -9,7 +9,7 @@ const ViewTabButton = ({ isActive, onClick, icon, label }) => {
 			{
 				'border-opacity-0': !isActive,
 				'text-gray-200': isHovering || isActive,
-				'border-opacity-40': isActive
+				'border-opacity-40': isActive,
 			}
 		);
 		const iconCns = cn({

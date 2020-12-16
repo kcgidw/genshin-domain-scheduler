@@ -3,11 +3,10 @@ module.exports = {
 	purge: [],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
-		extend: {},
-		colors: {
-			blue: colors.blue,
-			gray: colors.blueGray,
-			green: colors.green,
+		extend: {
+			colors: {
+				gray: colors.blueGray,
+			},
 		},
 		fontFamily: {
 			mont: 'Montserrat, ui-sans-serif',

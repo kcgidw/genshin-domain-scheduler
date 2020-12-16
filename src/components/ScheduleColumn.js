@@ -4,23 +4,10 @@ import {
 	getSelectedCharactersForMat,
 	getSelectedWeaponsForMat,
 } from '../data';
-import { getTitle } from '../days';
+import ScheduleColumnHeader from './ScheduleColumnHeader';
 import MatCard from './MatCard';
 
-const ColHeader = ({ day }) => {
-	return (
-		<div className="p-8 grid place-content-center">
-			<h1 className="m-0">{getTitle(day)}</h1>
-		</div>
-	);
-};
-
-const ScheduleColumn = ({
-	selectedCharacters,
-	selectedWeapons,
-	day,
-	today,
-}) => {
+const ScheduleColumn = ({ selectedCharacters, selectedWeapons, day }) => {
 	const ColContent = ({ mats = [] }) => {
 		const renderMats = () => {
 			return mats.map((mat) => (
@@ -43,7 +30,10 @@ const ScheduleColumn = ({
 			key={day}
 			className="max-w-xs flex-grow bg-gray-800 border-0 shadow"
 		>
-			<ColHeader day={day} key={`${day}-header`}></ColHeader>
+			<ScheduleColumnHeader
+				day={day}
+				key={`${day}-header`}
+			></ScheduleColumnHeader>
 			<ColContent
 				mats={getScheduledMatsForDay(
 					day,

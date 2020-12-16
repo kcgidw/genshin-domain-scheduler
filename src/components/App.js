@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useLocalStorage } from 'react-use';
 import Schedule from './Schedule';
 import ViewTabButton from './ViewTabButton';

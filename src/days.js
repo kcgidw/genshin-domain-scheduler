@@ -1,22 +1,9 @@
-import getDay from 'date-fns/getDay';
-
-const dayTitles = {
-	monthur: 'Mon / Thur',
-	tuefri: 'Tue / Fri',
-	wedsat: 'Wed / Sat',
+const days = {
+	monthur: 'monthur',
+	tuefri: 'tuefri',
+	wedsat: 'wedsat',
 };
 
-const list = Object.keys(dayTitles);
+const list = Object.keys(days);
 
-const getTitle = (day) => {
-	return dayTitles[day];
-};
-
-const isToday = (day) => {
-	return (
-		['sun', 'mon', 'tue', 'wed', 'thur', 'fri', 'sat'][getDay()] ===
-		day.toLowerCase()
-	);
-};
-
-export { list, getTitle, isToday };
+export { list, days };

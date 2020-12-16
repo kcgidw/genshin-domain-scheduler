@@ -21,7 +21,7 @@ const MatCard = ({ data, characters = [], weapons = [] }) => {
 				<li className="text-xs tracking-wide">{cap(name)}</li>
 			);
 			return (
-				<ul className="ml-4 list-disc" key={name}>
+				<ul className="ml-4 list-disc font-extralight" key={name}>
 					{inner}
 				</ul>
 			);
@@ -29,7 +29,7 @@ const MatCard = ({ data, characters = [], weapons = [] }) => {
 	};
 
 	const cns = cn({
-		'py-4 px-8 flex flex-row cursor-pointer transition-all hover:bg-gray-600': true,
+		'py-4 px-8 flex flex-row cursor-pointer transition-all hover:bg-gray-700': true,
 	});
 
 	return (
