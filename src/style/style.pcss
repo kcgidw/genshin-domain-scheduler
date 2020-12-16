@@ -10,8 +10,7 @@ input[type='button'] {
 @layer base {
 	h1,
 	h2,
-	h3,
-	h4 {
+	h3 {
 		@apply text-gray-300;
 		@apply font-mont;
 		@apply font-medium;
@@ -19,15 +18,12 @@ input[type='button'] {
 
 	h1 {
 		@apply text-2xl;
-		@apply mb-2;
+		@apply mb-4;
 	}
 	h2 {
 		@apply text-xl;
 	}
 	h3 {
-		@apply text-lg;
-	}
-	h4 {
 		@apply text-gray-400;
 		@apply leading-4;
 		@apply mt-1 mb-2;
@@ -63,4 +59,12 @@ img {
 
 li::marker {
 	@apply text-gray-600;
+}
+
+.column-header-glow {
+	background: linear-gradient(
+		180deg,
+		rgba(119, 117, 90, 0.2) 0%,
+		rgba(119, 117, 90, 0) 15%
+	);
 }

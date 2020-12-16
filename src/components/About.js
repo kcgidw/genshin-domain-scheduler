@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
 	return (
-		<div id="about" className="m-auto max-w-2xl">
+		<div id="about" className="m-auto max-w-2xl p-4 md:p-0">
 			<h1>Genshin Domain Scheduler</h1>
 			<p>Dead-simple personalized domain schedules for Genshin Impact.</p>
 			<p>
@@ -16,8 +16,8 @@ const About = () => {
 				more information on them (like which domain they're in).
 			</p>
 			<p>
-				Looking for more features? Try checking out these fansites that
-				I like:
+				Looking for more features? Check out these tools from other
+				fans:
 				<ul className="list-disc list-inside">
 					<li>
 						<a href="https://genshin.poporing.life/">

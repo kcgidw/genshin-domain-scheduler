@@ -41,10 +41,10 @@ const ScheduleColumnHeader = ({ day }) => {
 	const todayIdx = getDay(new Date());
 	const isToday = dayIdxs[day].includes(todayIdx);
 	const cns = cn(
-		'p-8 grid place-content-center border-t-4 border-yellow-200',
+		'p-8 grid place-content-center bg-opacity-20 border-t-4 border-yellow-200',
 		{
-			' border-opacity-0': !isToday,
-			' border-opacity-40': isToday,
+			'border-opacity-0': !isToday,
+			'column-header-glow border-opacity-50': isToday,
 		}
 	);
 	const headerCns = cn('m-0 text-gray-300', {});

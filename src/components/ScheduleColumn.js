@@ -28,7 +28,7 @@ const ScheduleColumn = ({ selectedCharacters, selectedWeapons, day }) => {
 	return (
 		<div
 			key={day}
-			className="max-w-xs flex-grow bg-gray-800 border-0 shadow"
+			className="max-w-xs flex-grow bg-gray-800  border-0 shadow overflow-hidden"
 		>
 			<ScheduleColumnHeader
 				day={day}

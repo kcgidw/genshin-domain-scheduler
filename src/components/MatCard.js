@@ -38,7 +38,7 @@ const MatCard = ({ data, characters = [], weapons = [] }) => {
 				<Image name={data.name}></Image>
 			</div>
 			<div className="flex flex-col flex-grow">
-				<h4>{data.name.toUpperCase()}</h4>
+				<h3>{data.name.toUpperCase()}</h3>
 				{renderCharacters()}
 				{renderWeapons()}
 			</div>
