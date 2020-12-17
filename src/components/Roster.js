@@ -26,7 +26,11 @@ const Roster = ({ selection = {}, onSelectionChange }) => {
 	};
 	return (
 		<div className="md:px-4">
-			<div className="flex flex-row flex-wrap">{renderItems()}</div>
+			<div className="flex flex-row flex-wrap mb-2">{renderItems()}</div>
+			<div className="text-xs">
+				Note: The required talent mat for Traveler varies based on each
+				individual talent's element and level.
+			</div>
 		</div>
 	);
 };

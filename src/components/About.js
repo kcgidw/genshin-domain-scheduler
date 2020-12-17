@@ -40,9 +40,7 @@ const About = () => {
 				- This webapp is a continual work in progress!
 			</p>
 			<p>
-				(For those wondering, the Travelers aren't in the roster because
-				the talent mats they need vary based on each talent's element
-				and level.)
+				<a href="https://ko-fi.com/krackocloud">Ko-fi</a>
 			</p>
 		</div>
 	);
