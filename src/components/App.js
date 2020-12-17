@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocalStorage, useMedia } from 'react-use';
 import Schedule from './Schedule';
 import TabbedSchedule from './TabbedSchedule';
-import ViewTabButton from './ViewTabButton';
+import NavButton from './NavButton';
 import { Calendar, Info, Users } from 'react-feather';
 import About from './About';
 import CustomizeView from './CustomizeView';
@@ -77,7 +77,7 @@ const App = () => {
 	const renderNavButtons = () => {
 		return Object.keys(Views).map((viewKey) => {
 			return (
-				<ViewTabButton
+				<NavButton
 					isActive={view === viewKey}
 					onClick={() => {
 						setView(viewKey);
@@ -85,7 +85,7 @@ const App = () => {
 					icon={NavButtonIcons[viewKey]}
 					label={viewKey}
 					key={viewKey}
-				></ViewTabButton>
+				></NavButton>
 			);
 		});
 	};
