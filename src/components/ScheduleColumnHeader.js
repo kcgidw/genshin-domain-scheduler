@@ -8,9 +8,9 @@ const dayIdxs = {
 	wedsat: [3, 6],
 };
 
-const renderDayTitle = (dayTuple, todayIdx) => {
+const renderDayTitle = (dayPair, todayIdx) => {
 	const todayCn = (idx) => cn({ 'text-yellow-100': todayIdx === idx });
-	switch (dayTuple) {
+	switch (dayPair) {
 		case 'monthur':
 			return (
 				<>
@@ -33,7 +33,7 @@ const renderDayTitle = (dayTuple, todayIdx) => {
 				</>
 			);
 		default:
-			console.warn(`Invalid day ${dayTuple}`);
+			console.warn(`Invalid day ${dayPair}`);
 	}
 };
 

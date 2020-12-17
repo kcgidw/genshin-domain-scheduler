@@ -9,11 +9,8 @@ const About = () => {
 				Use the <strong>Customize</strong> view to add characters and
 				weapons. The <strong>Schedule</strong> view will automatically
 				update itself to show the relevant daily-domain materials for
-				talents and weapons.
-			</p>
-			<p>
-				In the <strong>Schedule</strong> view, click on materials to see
-				more information on them (like which domain they're in).
+				talents and weapons. Then click on materials to see more info,
+				like domain locations.
 			</p>
 			<p>
 				Looking for more features? Check out these tools from other

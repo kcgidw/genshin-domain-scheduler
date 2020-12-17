@@ -21,7 +21,7 @@ const NavButtonIcons = {
 
 const App = () => {
 	const [view, setView] = useState(Views.schedule);
-	const isWide = useMedia('(min-width: 640px)');
+	const isWide = useMedia('(min-width: 768px)');
 
 	const [selectedCharacters, setSelectedCharacters] = useLocalStorage(
 		'selectedCharacters',
@@ -95,7 +95,7 @@ const App = () => {
 			<nav className="flex-grow-0 p-2 flex flex-row">
 				{renderNavButtons()}
 			</nav>
-			<div id="main" className="flex-grow md:p-8 md:pt-12">
+			<div id="main" className="flex-grow md:py-12">
 				{renderView()}
 			</div>
 			<footer className="flex-grow-0 p-2 text-xs text-gray-500">

@@ -20,7 +20,11 @@ const ScheduleColumnContent = ({
 			></MatCard>
 		));
 	};
-	return <div className="pb-8">{renderMats()}</div>;
+	return (
+		<div className="pb-8 m-auto md:m-0 max-w-sm md:max-w-full">
+			{renderMats()}
+		</div>
+	);
 };
 
 export default ScheduleColumnContent;

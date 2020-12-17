@@ -4,11 +4,11 @@ import getDay from 'date-fns/getDay';
 import * as days from '../days';
 import ScheduleColumnContent from './ScheduleColumnContent';
 import { getScheduledMatsForDay } from '../data';
+import { Tab, Tabs } from './Tabs';
 
-const renderDayTitle = (dayTuple, todayIdx) => {
-	// const todayCn = (idx) => cn({ 'text-yellow-100': todayIdx === idx });
-	const todayCn = () => '';
-	switch (dayTuple) {
+const renderDayTitle = (dayPair, todayIdx) => {
+	const todayCn = (idx) => cn({ 'text-yellow-100': todayIdx === idx });
+	switch (dayPair) {
 		case 'monthur':
 			return (
 				<>
@@ -31,35 +31,25 @@ const renderDayTitle = (dayTuple, todayIdx) => {
 				</>
 			);
 		default:
-			console.warn(`Invalid day ${dayTuple}`);
+			console.warn(`Invalid day ${dayPair}`);
 	}
-};
-
-const ScheduleTab = ({ day, isActive, onClick }) => {
-	const cns = cn('p-2 text-center bg-gray-800', {});
-	const hCns = cn('mb-0 p-1 text-base rounded', {
-		'text-gray-200 bg-gray-600': isActive,
-		'text-gray-300': !isActive,
-	});
-	return (
-		<div className={cns} onClick={onClick}>
-			<h1 className={hCns}>{renderDayTitle(day, getDay(new Date()))}</h1>
-		</div>
-	);
 };
 
 const Schedule = ({ selectedCharacters, selectedWeapons }) => {
 	const [activeTab, setActiveTab] = useState('monthur');
 
 	const renderTabs = () => {
-		return days.list.map((day) => {
+		return days.list.map((d) => {
 			return (
-				<ScheduleTab
-					day={day}
-					isActive={activeTab === day}
-					key={day}
-					onClick={() => setActiveTab(day)}
-				/>
+				<Tab
+					isActive={activeTab === d}
+					onClick={() => {
+						setActiveTab(d);
+					}}
+					key={d}
+				>
+					{renderDayTitle(d, getDay(new Date()))}
+				</Tab>
 			);
 		});
 	};
@@ -82,9 +72,7 @@ const Schedule = ({ selectedCharacters, selectedWeapons }) => {
 
 	return (
 		<div id="tabbed-schedule" className="">
-			<div id="tabbed-schedule-tabs" className="grid grid-cols-3">
-				{renderTabs()}
-			</div>
+			<Tabs className="grid grid-cols-3">{renderTabs()}</Tabs>
 			<div className="pt-4 bg-gray-800">
 				{renderTabContent(activeTab)}
 			</div>

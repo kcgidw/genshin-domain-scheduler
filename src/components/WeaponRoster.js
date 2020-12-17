@@ -25,8 +25,7 @@ const WeaponRoster = ({ selection = {}, onSelectionChange }) => {
 		});
 	};
 	return (
-		<div className="p-4 md:p-8 section-card">
-			<h1>Weapons</h1>
+		<div className="p-2">
 			<div className="flex flex-row flex-wrap">{renderItems()}</div>
 		</div>
 	);
