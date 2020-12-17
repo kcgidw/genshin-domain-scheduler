@@ -10,7 +10,7 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			mont: 'Montserrat, ui-sans-serif',
+			mont: 'Montserrat, ui-sans-serif, sans-serif',
 		},
 	},
 	variants: {
