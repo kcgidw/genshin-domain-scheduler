@@ -71,11 +71,9 @@ const Schedule = ({ selectedCharacters, selectedWeapons }) => {
 	};
 
 	return (
-		<div id="tabbed-schedule" className="">
+		<div id="tabbed-schedule" className="section-card">
 			<Tabs className="grid grid-cols-3">{renderTabs()}</Tabs>
-			<div className="pt-4 bg-gray-800">
-				{renderTabContent(activeTab)}
-			</div>
+			<div>{renderTabContent(activeTab)}</div>
 		</div>
 	);
 };

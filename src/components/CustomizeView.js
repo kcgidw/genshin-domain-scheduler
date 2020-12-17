@@ -30,7 +30,7 @@ const CustomizeView = ({
 
 	return (
 		<div id="customize" className="m-auto max-w-4xl section-card">
-			<Tabs className="grid grid-cols-2 mb-4">
+			<Tabs className="grid grid-cols-2">
 				<Tab
 					isActive={activeTab === 'characters'}
 					onClick={() => {
@@ -48,7 +48,7 @@ const CustomizeView = ({
 					Weapons
 				</Tab>
 			</Tabs>
-			{renderContent()}
+			<div className="px-2 md:px-4">{renderContent()}</div>
 		</div>
 	);
 };

@@ -25,7 +25,7 @@ const Roster = ({ selection = {}, onSelectionChange }) => {
 		});
 	};
 	return (
-		<div className="p-2 md:p-4">
+		<div className="md:px-4">
 			<div className="flex flex-row flex-wrap">{renderItems()}</div>
 		</div>
 	);

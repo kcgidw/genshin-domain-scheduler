@@ -23,7 +23,7 @@ const Tab = ({ children, isActive, onClick }) => {
 };
 
 const Tabs = ({ children, className }) => {
-	const cns = cn(className, 'bg-gray-700 shadow-md');
+	const cns = cn(className, 'mb-4 md:mb-8 bg-gray-700 shadow-md');
 	return <div className={cns}>{children}</div>;
 };
 
