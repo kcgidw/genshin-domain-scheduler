@@ -10,7 +10,7 @@ const data = {
 		],
 	},
 	resistance: {
-		characters: ['bennet', 'diluc', 'jean', 'mona', 'noelle', 'razor'],
+		characters: ['bennett', 'diluc', 'jean', 'mona', 'noelle', 'razor'],
 	},
 	ballad: {
 		characters: ['fischl', 'kaeya', 'lisa', 'venti'],
