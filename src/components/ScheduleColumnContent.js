@@ -1,5 +1,5 @@
-import React from 'react';
-import { getSelectedCharactersForMat, getSelectedWeaponsForMat } from '../data';
+import React, { useState } from 'react';
+import { getDomainData, getSelectedCharactersForMat, getSelectedWeaponsForMat } from '../data';
 import MatCard from './MatCard';
 
 const ScheduleColumnContent = ({
@@ -24,6 +24,7 @@ const ScheduleColumnContent = ({
 				)}
 				weapons={getSelectedWeaponsForMat(selectedWeapons, mat)}
 				data={mat}
+				domainData={getDomainData(mat.name)}
 				key={mat.name}
 			></MatCard>
 		));

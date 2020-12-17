@@ -5,11 +5,12 @@ import domains from './data/domains';
 import characters from './data/characters';
 import weapons from './data/weapons';
 
-const getDomain = memoize((matName) => {
-	return Object.keys(domains).find((domainName) => {
+const getDomainData = memoize((matName) => {
+	const domainName = Object.keys(domains).find((domainName) => {
 		const domainData = domains[domainName];
 		return Object.values(domainData.dropSchedule).includes(matName);
 	});
+	return domains[domainName]
 });
 
 const matsByDay = {
@@ -91,6 +92,7 @@ const getAllWeapons = () => {
 export {
 	getAllCharacters,
 	getAllWeapons,
+	getDomainData,
 	getScheduledMatsForDay,
 	getSelectedCharactersForMat,
 	getSelectedWeaponsForMat,
