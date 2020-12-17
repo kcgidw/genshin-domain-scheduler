@@ -5,7 +5,7 @@ import ScheduleColumnHeader from './ScheduleColumnHeader';
 
 const ScheduleColumn = ({ selectedCharacters, selectedWeapons, day }) => {
 	return (
-		<div key={day} className="max-w-xs flex-1 section-card">
+		<div key={day} className="max-w-xs flex-1 flex flex-col section-card">
 			<ScheduleColumnHeader
 				day={day}
 				key={`${day}-header`}

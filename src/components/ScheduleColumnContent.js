@@ -7,6 +7,14 @@ const ScheduleColumnContent = ({
 	selectedWeapons,
 	mats = [],
 }) => {
+	if (!mats.length) {
+		return (
+			<div className="h-16 flex-grow grid place-content-center">
+				<h3 className="text-gray-500">No domains today</h3>
+			</div>
+		);
+	}
+
 	const renderMats = () => {
 		return mats.map((mat) => (
 			<MatCard
