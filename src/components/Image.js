@@ -80,7 +80,9 @@ const images = {
 };
 
 const CharacterImage = ({ name }) => {
-	return <img className="h-full object-contain inline" src={images[name]}></img>;
+	return (
+		<img className="h-full object-contain inline" src={images[name]}></img>
+	);
 };
 
 export default CharacterImage;

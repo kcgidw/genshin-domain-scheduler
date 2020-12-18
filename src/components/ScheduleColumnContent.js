@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
-import { getDomainData, getSelectedCharactersForMat, getSelectedWeaponsForMat } from '../data';
+import React from 'react';
+import {
+	getDomainData,
+	getSelectedCharactersForMat,
+	getSelectedWeaponsForMat,
+} from '../data';
 import MatCard from './MatCard';
 
 const ScheduleColumnContent = ({
@@ -10,7 +14,7 @@ const ScheduleColumnContent = ({
 	if (!mats.length) {
 		return (
 			<div className="h-16 flex-grow grid place-content-center">
-				<h3 className="text-gray-500">No domains today</h3>
+				<h3 className="text-gray-500">No domain materials today</h3>
 			</div>
 		);
 	}

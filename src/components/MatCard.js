@@ -6,15 +6,13 @@ import { cap } from '../util';
 import MatModal from './MatModal';
 
 const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
-	const [showModal, setShowModal] = useState(false)
+	const [showModal, setShowModal] = useState(false);
 	const openModal = () => {
-		setShowModal(true)
-	}
+		setShowModal(true);
+	};
 	const closeModal = () => {
-		setShowModal(false)
-	}
-
-	const isWeaponMat = weapons.length > 0;
+		setShowModal(false);
+	};
 
 	const renderCharacters = () => {
 		const inner = characters.map((charaName) => {
@@ -38,11 +36,6 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 			);
 		});
 	};
-	const renderModalContent = () => {
-		if (isWeaponMat) {
-
-		}
-	}
 
 	const cns = cn({
 		'py-5 px-8 flex flex-row cursor-pointer transition-all hover:bg-gray-700': true,
@@ -61,31 +54,42 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 			<MatModal onClose={closeModal} isOpen={showModal}>
 				<div className="text-center uppercase mb-8">
 					<h1 className="mb-0">{data.name}</h1>
-					<h3 className="text-gray-500">{characters.length ? 'Talent material' : 'Weapon ascension material'}</h3>
+					<h3 className="text-gray-500">
+						{characters.length
+							? 'Talent material'
+							: 'Weapon ascension material'}
+					</h3>
 					<div className="m-auto my-6 h-20 w-20 flex justify-center">
 						<Image name={data.name}></Image>
 					</div>
 				</div>
 				<div className="mb-8">
-					<span className="text-green-200">{cap(domainData.name)}</span> - {cap(domainData.location.join(', '))}
+					<span className="text-green-200">
+						{cap(domainData.name)}
+					</span>{' '}
+					- {cap(domainData.location.join(', '))}
 				</div>
 				<div>
 					<div className="mb-2">Use for:</div>
 					<ul className="space-y-2">
 						{characters.map((charaName) => {
-							return <li className="h-10" key={charaName}>
-								<span className="inline mr-2">
-									<Image name={charaName}></Image>
-								</span>
-								<span>{cap(charaName)}</span>
-							</li>
+							return (
+								<li className="h-10" key={charaName}>
+									<span className="inline mr-2">
+										<Image name={charaName}></Image>
+									</span>
+									<span>{cap(charaName)}</span>
+								</li>
+							);
 						})}
 					</ul>
 					<ul className="list-disc list-inside">
 						{weapons.map((name) => {
-							return <li key={name}>
-								<span>{cap(name)}</span>
-							</li>
+							return (
+								<li key={name}>
+									<span>{cap(name)}</span>
+								</li>
+							);
 						})}
 					</ul>
 				</div>
