@@ -1,8 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
-const CompressionPlugin = require('compression-webpack-plugin');
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const CssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = (env = {}) => {
 	const prod = env.production;
@@ -37,18 +40,22 @@ module.exports = (env = {}) => {
 						},
 					],
 				},
+				// {
+				// 	test: /\.html$/,
+				// 	use: [
+				// 		{
+				// 			loader: 'file-loader',
+				// 			options: { name: '[name].html' },
+				// 		},
+				// 	],
+				// },
 				{
-					test: /\.html$/,
+					test: /\.(sc|sa|pc|c)ss$/,
 					use: [
-						{
-							loader: 'file-loader',
-							options: { name: '[name].html' },
-						},
+						prod ? CssExtractPlugin.loader : 'style-loader',
+						'css-loader',
+						'postcss-loader',
 					],
-				},
-				{
-					test: /\.(sc|pc|c)ss$/,
-					use: ['style-loader', 'css-loader', 'postcss-loader'],
 				},
 				{
 					test: /\.(png|jpg|gif|bmp|webp)$/,
@@ -58,15 +65,22 @@ module.exports = (env = {}) => {
 		},
 		optimization: {
 			minimize: prod,
-			minimizer: [new TerserPlugin()],
+			minimizer: [
+				new TerserPlugin(),
+				prod && new CssMinimizerPlugin(),
+			].filter(Boolean),
 		},
 		plugins: [
-			new CompressionPlugin(),
-			new webpack.DefinePlugin({
-				PRODUCTION: prod,
+			new HtmlPlugin({
+				template: './src/index.html',
 			}),
+			new CompressionPlugin(),
 			!prod && new webpack.HotModuleReplacementPlugin(),
 			!prod && new ReactRefreshPlugin(),
+			prod &&
+				new CssExtractPlugin({
+					filename: 'style.bundle.css',
+				}),
 		].filter(Boolean),
 	};
 
