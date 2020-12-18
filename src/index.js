@@ -8,6 +8,7 @@ import App from './components/App';
 
 ReactDOM.render(<App></App>, document.getElementById('app'));
 
-if (!PRODUCTION && module.hot) {
+if (!process.env.NODE_ENV !== 'production' && module.hot) {
+	console.log('HMR on');
 	module.hot.accept();
 }

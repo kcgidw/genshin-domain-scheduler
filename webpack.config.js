@@ -9,7 +9,7 @@ module.exports = (env = {}) => {
 
 	const config = {
 		mode: prod ? 'production' : 'development',
-		entry: [path.resolve(__dirname, 'src', 'index.js')],
+		entry: ['./src/index.js'],
 		output: {
 			path: path.resolve(__dirname, 'dist'),
 			filename: 'index.bundle.min.js',
@@ -58,7 +58,7 @@ module.exports = (env = {}) => {
 		},
 		optimization: {
 			minimize: prod,
-			minimizer: [new TerserPlugin({ sourceMap: true })],
+			minimizer: [new TerserPlugin()],
 		},
 		plugins: [
 			new CompressionPlugin(),
