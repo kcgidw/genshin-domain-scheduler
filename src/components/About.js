@@ -15,24 +15,22 @@ const About = () => {
 			<p>
 				Looking for more features? Check out these tools from other
 				fans:
-				<ul className="list-disc list-inside">
-					<li>
-						<a href="https://genshin.poporing.life/">
-							Genshin Farming Calculator
-						</a>
-					</li>
-					<li>
-						<a href="https://genshin.chiya.dev/">
-							Genshin Schedule
-						</a>
-					</li>
-					<li>
-						<a href="https://genshin-center.com/planner">
-							Genshin Center - Ascension Planner
-						</a>
-					</li>
-				</ul>
 			</p>
+			<ul className="list-disc list-inside">
+				<li>
+					<a href="https://genshin.poporing.life/">
+						Genshin Farming Calculator
+					</a>
+				</li>
+				<li>
+					<a href="https://genshin.chiya.dev/">Genshin Schedule</a>
+				</li>
+				<li>
+					<a href="https://genshin-center.com/planner">
+						Genshin Center - Ascension Planner
+					</a>
+				</li>
+			</ul>
 			<p>
 				<a href="https://github.com/kcgidw/genshin-domain-scheduler">
 					Github
