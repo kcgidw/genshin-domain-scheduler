@@ -79,7 +79,7 @@ module.exports = (env = {}) => {
 			!prod && new ReactRefreshPlugin(),
 			prod &&
 				new CssExtractPlugin({
-					filename: 'style.bundle.css',
+					filename: 'style-[contenthash].css',
 				}),
 		].filter(Boolean),
 	};
