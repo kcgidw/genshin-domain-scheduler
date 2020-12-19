@@ -2,8 +2,6 @@
 
 Dead-simple personalized domain schedules for Genshin Impact.
 
-Work in progress.
-
 Data update/correction PRs very welcome!
 
 ## Develop
