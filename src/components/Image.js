@@ -1,4 +1,6 @@
 import React from 'react';
+import cn from 'classnames';
+
 import amber from '../assets/amber.png';
 import barbara from '../assets/barbara.png';
 import beidou from '../assets/beidou.png';
@@ -79,10 +81,11 @@ const images = {
 	aerosiderite,
 };
 
-const CharacterImage = ({ name }) => {
-	return (
-		<img className="h-full object-contain inline" src={images[name]}></img>
-	);
+const CharacterImage = ({ name, shadow }) => {
+	const cns = cn('h-full object-contain inline', {
+		'filter-shadow': shadow,
+	});
+	return <img className={cns} src={images[name]}></img>;
 };
 
 export default CharacterImage;

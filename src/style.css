@@ -20,7 +20,7 @@
 
 body {
 	@apply h-screen bg-gray-900 text-gray-400;
-	background: linear-gradient(180deg, #111827 75%, rgb(9 30 43) 100%);
+	background: linear-gradient(180deg, #0c1425 70%, #0a2230 100%);
 }
 
 #app {
@@ -39,6 +39,9 @@ p {
 img {
 	image-rendering: -webkit-optimize-contrast;
 	/* image-rendering: crisp-edges; */
+}
+.filter-shadow {
+	filter: drop-shadow(2px 4px 4px #00000022);
 }
 
 button,

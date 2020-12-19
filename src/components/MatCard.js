@@ -17,7 +17,7 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 	const renderCharacters = () => {
 		const inner = characters.map((charaName) => {
 			return (
-				<span className="h-8" key={charaName}>
+				<span className="h-8 my-0.5 mx-1" key={charaName}>
 					<Image name={charaName}></Image>
 				</span>
 			);
@@ -44,10 +44,10 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 	return (
 		<div className={cns} onClick={openModal}>
 			<div className="h-16 w-16 mr-4 flex-shrink-0">
-				<Image name={data.name}></Image>
+				<Image name={data.name} shadow></Image>
 			</div>
 			<div className="flex flex-col flex-grow">
-				<h3>{data.name.toUpperCase()}</h3>
+				<h3 className="mb-1">{data.name.toUpperCase()}</h3>
 				{renderCharacters()}
 				{renderWeapons()}
 			</div>
@@ -60,7 +60,7 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 							: 'Weapon ascension material'}
 					</h3>
 					<div className="m-auto my-6 h-20 w-20 flex justify-center">
-						<Image name={data.name}></Image>
+						<Image name={data.name} shadow></Image>
 					</div>
 				</div>
 				<div className="mb-8">
@@ -70,7 +70,7 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 					- {cap(domainData.location.join(', '))}
 				</div>
 				<div>
-					<div className="mb-2">Use for:</div>
+					<div className="mb-1">Use for:</div>
 					<ul className="space-y-2">
 						{characters.map((charaName) => {
 							return (
