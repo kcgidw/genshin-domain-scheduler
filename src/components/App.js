@@ -6,6 +6,7 @@ import NavButton from './NavButton';
 import { Calendar, Info, Users } from 'react-feather';
 import About from './About';
 import CustomizeView from './CustomizeView';
+import Placeholder from './Placeholder';
 
 const Views = {
 	schedule: 'schedule',
@@ -90,15 +91,31 @@ const App = () => {
 		});
 	};
 
+	const renderPlaceholder = () => {
+		if (
+			!Object.keys(selectedCharacters).length &&
+			!Object.keys(selectedWeapons).length
+		) {
+			return (
+				<Placeholder
+					onLink={() => {
+						setView('customize');
+					}}
+				></Placeholder>
+			);
+		}
+	};
+
 	return (
 		<div className="flex flex-col min-h-screen">
 			<nav className="flex-grow-0 p-2 flex flex-row">
 				{renderNavButtons()}
 			</nav>
 			<div id="main" className="flex-grow md:py-12">
+				{view === 'schedule' && renderPlaceholder()}
 				{renderView()}
 			</div>
-			<footer className="flex-grow-0 p-2 text-xs text-gray-500">
+			<footer className="flex-grow-0 p-2 text-xs text-gray-200 opacity-30">
 				This fansite is not affiliated with or endorsed by miHoYo.
 			</footer>
 		</div>

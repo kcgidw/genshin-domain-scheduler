@@ -11,6 +11,7 @@ module.exports = {
 		},
 		fontFamily: {
 			mont: 'Montserrat, ui-sans-serif, sans-serif',
+			// crete: 'Crete Round, ui-sans-serif, sans-serif',
 		},
 	},
 	variants: {

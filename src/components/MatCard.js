@@ -27,7 +27,9 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 	const renderWeapons = () => {
 		return weapons.map((name) => {
 			const inner = (
-				<li className="text-xs 2xl:text-sm tracking-wide">{cap(name)}</li>
+				<li className="text-xs 2xl:text-sm tracking-wide">
+					{cap(name)}
+				</li>
 			);
 			return (
 				<ul className="ml-4 list-disc font-mont" key={name}>
@@ -47,7 +49,7 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 				<Image name={data.name} shadow></Image>
 			</div>
 			<div className="flex flex-col flex-grow">
-				<h3 className="mb-1">{data.name.toUpperCase()}</h3>
+				<h3 className="mb-1 uppercase">{data.name}</h3>
 				{renderCharacters()}
 				{renderWeapons()}
 			</div>
