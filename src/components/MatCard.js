@@ -27,7 +27,7 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 	const renderWeapons = () => {
 		return weapons.map((name) => {
 			const inner = (
-				<li className="text-xs 2xl:text-sm tracking-wide">
+				<li className="text-xs tracking-wide">
 					{cap(name)}
 				</li>
 			);

@@ -12,10 +12,16 @@
 		@apply text-lg md:text-3xl mb-4;
 	}
 	h2 {
-		@apply text-lg md:text-xl 2xl:text-2xl;
+		@apply text-lg md:text-xl;
 	}
 	h3 {
-		@apply my-1 leading-none 2xl:text-lg 2xl:leading-none text-gray-400;
+		@apply my-1 leading-none text-gray-400;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	html{
+		font-size: 115%;
 	}
 }
 
