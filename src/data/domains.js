@@ -22,7 +22,7 @@ const data = {
 		type: 'weapon',
 		dropSchedule: {
 			monthur: 'decarabian',
-			tuefri: 'boreal',
+			tuefri: 'boreal wolf',
 			wedsat: 'dandelion gladiator',
 		},
 	},

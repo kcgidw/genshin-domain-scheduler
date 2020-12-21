@@ -19,7 +19,7 @@ const data = {
 			'the viridescent hunt': true,
 		},
 	},
-	boreal: {
+	'boreal wolf': {
 		weapons: {
 			'alley hunter': true,
 			'bloodtainted greatsword': true,

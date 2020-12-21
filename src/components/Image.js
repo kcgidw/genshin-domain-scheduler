@@ -73,7 +73,7 @@ const images = {
 	diligence,
 	gold,
 	// weapon
-	boreal,
+	'boreal wolf': boreal,
 	decarabian,
 	'dandelion gladiator': dandelion,
 	elixir,
