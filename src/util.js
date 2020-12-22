@@ -4,7 +4,12 @@ import capitalize from 'lodash/capitalize';
 const cap = (str) => {
 	return str
 		.split(' ')
-		.map((substr) => capitalize(substr))
+		.map((substr) => {
+			if (['of', 'to', 'the'].includes(substr)) {
+				return substr;
+			}
+			return capitalize(substr);
+		})
 		.join(' ');
 };
 export { cap };
