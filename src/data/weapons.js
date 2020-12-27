@@ -4,7 +4,7 @@ const data = {
 	'alley hunter': {},
 	'aquila favonia': {},
 	'black tassel': {},
-	'blackcliff amulet': {},
+	'blackcliff agate': {},
 	'blackcliff longsword': {},
 	'blackcliff slasher': {},
 	'blackcliff warbow': {},
@@ -34,10 +34,10 @@ const data = {
 	'otherworldly story': {},
 	'pocket grimoire': {},
 	'primordial jade winged-spear': {},
-	'prototype aminus': {},
+	'prototype archaic': {},
 	'prototype crescent': {},
-	'prototype grudge': {},
-	'prototype malice': {},
+	'prototype starglitter': {},
+	'prototype amber': {},
 	'prototype rancour': {},
 	'raven bow': {},
 	'recurve bow': {},
@@ -95,9 +95,9 @@ const data = {
 	whiteblind: {},
 	'festering desire': {},
 	'snow-tombed starsilver': {},
-	'dragonspine spear': {}, // TODO mat
-	'frostbearer': {}, // TODO mat
-	'summit shaper': {}, // TODO mat
+	'dragonspine spear': {},
+	frostbearer: {},
+	'summit shaper': {},
 };
 
 export default named(data);

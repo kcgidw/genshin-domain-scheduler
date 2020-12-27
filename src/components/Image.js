@@ -25,6 +25,7 @@ import xiao from '../assets/xiao.png';
 import xingqiu from '../assets/xingqiu.png';
 import xinyan from '../assets/xinyan.png';
 import zhongli from '../assets/zhongli.png';
+import albedo from '../assets/albedo.png';
 
 import freedom from '../assets/freedom.webp';
 import resistance from '../assets/resistance.webp';
@@ -65,6 +66,7 @@ const images = {
 	xingqiu,
 	xinyan,
 	zhongli,
+	albedo,
 	// talent
 	freedom,
 	resistance,
