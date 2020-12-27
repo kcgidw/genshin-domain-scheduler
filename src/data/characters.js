@@ -1,4 +1,7 @@
+import named from './named';
+
 const map = {
+	albedo: {},
 	amber: {},
 	barbara: {},
 	beidou: {},
@@ -6,6 +9,8 @@ const map = {
 	chongyun: {},
 	diluc: {},
 	fischl: {},
+	// ganyu:{}
+	// hu tao:{}
 	kaeya: {},
 	jean: {},
 	keqing: {},
@@ -25,8 +30,4 @@ const map = {
 	zhongli: {},
 };
 
-Object.keys(map).forEach((key) => {
-	map[key].name = key;
-});
-
-export default map;
+export default named(map);

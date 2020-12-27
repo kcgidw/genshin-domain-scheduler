@@ -17,6 +17,7 @@ const data = {
 			'the bell': true,
 			'the stringless': true,
 			'the viridescent hunt': true,
+			'snow-tombed starsilver': true,
 		},
 	},
 	'boreal wolf': {
@@ -63,6 +64,7 @@ const data = {
 			"traveler's handy sword": true,
 			'white iron greatsword': true,
 			"wolf's gravestone": true,
+			"festering desire": true,
 		},
 	},
 	guyun: {

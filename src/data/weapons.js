@@ -1,3 +1,5 @@
+import named from './named';
+
 const data = {
 	'alley hunter': {},
 	'aquila favonia': {},
@@ -91,10 +93,11 @@ const data = {
 	rust: {},
 	slingshot: {},
 	whiteblind: {},
+	'festering desire': {},
+	'snow-tombed starsilver': {},
+	'dragonspine spear': {}, // TODO mat
+	'frostbearer': {}, // TODO mat
+	'summit shaper': {}, // TODO mat
 };
 
-Object.keys(data).forEach((key) => {
-	data[key].name = key;
-});
-
-export default data;
+export default named(data);

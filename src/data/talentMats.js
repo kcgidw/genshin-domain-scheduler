@@ -13,7 +13,7 @@ const data = {
 		characters: ['bennett', 'diluc', 'jean', 'mona', 'noelle', 'razor'],
 	},
 	ballad: {
-		characters: ['fischl', 'kaeya', 'lisa', 'venti'],
+		characters: ['fischl', 'kaeya', 'lisa', 'venti', 'albedo'],
 	},
 	prosperity: {
 		characters: ['keqing', 'ningguang', 'qiqi'],
