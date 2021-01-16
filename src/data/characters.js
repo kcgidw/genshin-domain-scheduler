@@ -9,7 +9,7 @@ const map = {
 	chongyun: {},
 	diluc: {},
 	fischl: {},
-	// ganyu:{}
+	ganyu: {},
 	// hu tao:{}
 	kaeya: {},
 	jean: {},
