@@ -13,8 +13,8 @@ const ScheduleColumnContent = ({
 }) => {
 	if (!mats.length) {
 		return (
-			<div className="h-32 pb-8 flex-grow grid place-content-center">
-				<h3 className="opacity-30">No domain materials today</h3>
+			<div className="h-32 md:pb-8 flex-grow grid place-content-center">
+				<h3 className="opacity-40">No domain materials today</h3>
 			</div>
 		);
 	}
@@ -34,7 +34,7 @@ const ScheduleColumnContent = ({
 		));
 	};
 	return (
-		<div className="m-auto pb-8 md:m-0 max-w-sm md:max-w-full">
+		<div className="m-auto md:pb-8 md:m-0 max-w-sm md:max-w-full">
 			{renderMats()}
 		</div>
 	);

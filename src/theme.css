@@ -18,8 +18,8 @@
 	--cardbase: var(--primary8);
 	--cardhover: var(--primary7);
 	--columnheader: transparent;
-	--link: hsl(200, 80%, 70%);
-	--linkhover: hsl(200, 80%, 75%);
+	--link: hsl(215, 90%, 75%);
+	--linkhover: hsl(215, 90%, 80%);
 	--tab: var(--primary7);
 	--tabhover: var(--primary6);
 	--tabcurrent: var(--primary5);

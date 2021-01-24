@@ -6,20 +6,27 @@ import ScheduleColumnHeader from './ScheduleColumnHeader';
 import { todayIdx, isDayPairToday } from '../days';
 
 const ScheduleColumn = ({ selectedCharacters, selectedWeapons, day }) => {
+	const today = isDayPairToday(day);
+	const sunday = todayIdx === 0;
+
 	const cns = cn(
-		'max-w-xs flex-1 flex flex-col section-card border-t border-yellow-200',
+		'max-w-xs relative flex-1 flex flex-col border-t border-yellow-200',
 		{
-			'border-opacity-0': !isDayPairToday(day),
-			'opacity-70': todayIdx !== 0 && !isDayPairToday(day),
-			'shadow-lg border-opacity-80': isDayPairToday(day),
+			'border-opacity-0': !today,
+			'opacity-70': !sunday && !today,
+			'shadow-lg border-opacity-80': today,
 		}
 	);
-	const glowCns = cn({
-		'column-glow': isDayPairToday(day),
+	const bgCns = cn('w-full h-full absolute bg-cardbase', {
+		'opacity-50': !sunday && !today,
 	});
-	console.log(isDayPairToday(day));
+	const glowCns = cn('z-10', {
+		'column-glow': today,
+	});
+
 	return (
 		<div key={day} className={cns}>
+			<div className={bgCns}></div>
 			<div className={glowCns}>
 				<ScheduleColumnHeader
 					day={day}

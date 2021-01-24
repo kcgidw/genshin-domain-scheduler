@@ -5,7 +5,7 @@ import { useHover } from 'react-use';
 const Tab = ({ children, isActive, onClick }) => {
 	const component = (isHovering) => {
 		const cns = cn('p-2 text-center cursor-pointer', {});
-		const hCns = cn('mb-0 p-2 text-base sm:text-xl rounded', {
+		const hCns = cn('mb-0 p-2 text-base md:text-xl rounded transition', {
 			'text-tabtext': !isActive && !isHovering,
 			'text-tabtexthover bg-tabhover': !isActive && isHovering,
 			'text-tabcurrenttext bg-tabcurrent': isActive,

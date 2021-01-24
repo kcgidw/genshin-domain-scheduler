@@ -29,7 +29,7 @@ const CustomizeView = ({
 	};
 
 	return (
-		<div id="customize" className="m-auto max-w-4xl section-card">
+		<div id="customize" className="m-auto max-w-4xl bg-cardbase">
 			<Tabs className="grid grid-cols-2">
 				<Tab
 					isActive={activeTab === 'characters'}

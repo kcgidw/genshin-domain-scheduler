@@ -13,7 +13,7 @@ const CharacterButton = ({ data, isSelected, onToggle }) => {
 	);
 	return (
 		<div className={cns} onClick={onToggle}>
-			<div className="h-8 sm:h-12 flex justify-center">
+			<div className="h-8 md:h-12 flex justify-center">
 				<Image name={data.name}></Image>
 			</div>
 			<div>{cap(data.name)}</div>
