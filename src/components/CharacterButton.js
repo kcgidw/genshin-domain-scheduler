@@ -5,10 +5,10 @@ import { cap } from '../util';
 
 const CharacterButton = ({ data, isSelected, onToggle }) => {
 	const cns = cn(
-		'flex-grow-0 text-center m-1 p-1 sm:p-2 w-20 sm:w-24 text-xs border-2 border-gray-700 rounded cursor-pointer transition-all',
-		'hover:bg-gray-700',
+		'flex-grow-0 text-center m-1 p-1 sm:p-2 w-20 sm:w-24 text-xs border-2 rounded cursor-pointer transition-all',
 		{
-			'bg-green-300 border-green-600 text-green-900 hover:bg-green-300 hover:opacity-70': isSelected,
+			'border-rosterbutton hover:bg-rosterbutton': !isSelected,
+			'bg-green-300 border-green-600 text-green-900 hover:opacity-70': isSelected,
 		}
 	);
 	return (

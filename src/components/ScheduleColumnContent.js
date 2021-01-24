@@ -34,7 +34,7 @@ const ScheduleColumnContent = ({
 		));
 	};
 	return (
-		<div className="m-auto md:m-0 max-w-sm md:max-w-full">
+		<div className="m-auto pb-8 md:m-0 max-w-sm md:max-w-full">
 			{renderMats()}
 		</div>
 	);

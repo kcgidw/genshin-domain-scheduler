@@ -48,7 +48,7 @@ const CustomizeView = ({
 					Weapons
 				</Tab>
 			</Tabs>
-			<div className="px-2 md:px-4">{renderContent()}</div>
+			<div className="px-2 md:px-4 py-4 md:py-8">{renderContent()}</div>
 		</div>
 	);
 };

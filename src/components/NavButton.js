@@ -5,16 +5,17 @@ import { useHover } from 'react-use';
 const ViewTabButton = ({ isActive, onClick, icon, label }) => {
 	const component = (isHovering) => {
 		const cns = cn(
-			'my-1 mx-2 md:mx-3 py-1 flex items-center space-x-1 text-xs font-mont border-b-2 border-gray-200 ',
+			'my-1 mx-2 md:mx-3 py-1 flex items-center space-x-1 border-b-2 text-xs text-navtext font-medium font-mont',
 			{
-				'border-opacity-0': !isActive,
-				'text-gray-200': isHovering || isActive,
-				'border-opacity-40': isActive,
+				'border-transparent': !isActive,
+				'text-navhover': isHovering || isActive,
+				'border-navicon text-navcurrent': isActive,
 			}
 		);
 		const iconCns = cn({
-			'text-gray-500': !isHovering && !isActive,
-			'text-gray-200': isHovering || isActive,
+			'text-navicon': !isHovering && !isActive,
+			'text-navhover': isHovering && !isActive,
+			'text-navcurrent': isActive,
 		});
 		return (
 			<button className={cns} onClick={onClick}>

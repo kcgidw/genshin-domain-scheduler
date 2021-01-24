@@ -107,17 +107,23 @@ const App = () => {
 	};
 
 	return (
-		<div className="flex flex-col min-h-screen">
-			<nav className="flex-grow-0 p-2 flex flex-row">
-				{renderNavButtons()}
-			</nav>
-			<div id="main" className="flex-grow md:py-12">
-				{view === 'schedule' && renderPlaceholder()}
-				{renderView()}
+		<div id="app-bg" className="dark">
+			<div id="modal-target"></div>
+			<div
+				id="app-scrollable"
+				className="flex flex-col h-screen overflow-y-auto"
+			>
+				<nav className="flex-grow-0 p-2 flex flex-row">
+					{renderNavButtons()}
+				</nav>
+				<div id="main" className="flex-grow md:py-12">
+					{view === 'schedule' && renderPlaceholder()}
+					{renderView()}
+				</div>
+				<footer className="flex-grow-0 p-2 text-xs text-white opacity-30">
+					This fansite is not affiliated with or endorsed by miHoYo.
+				</footer>
 			</div>
-			<footer className="flex-grow-0 p-2 text-xs text-gray-200 opacity-30">
-				This fansite is not affiliated with or endorsed by miHoYo.
-			</footer>
 		</div>
 	);
 };

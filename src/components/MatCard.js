@@ -26,11 +26,7 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 	};
 	const renderWeapons = () => {
 		return weapons.map((name) => {
-			const inner = (
-				<li className="text-xs tracking-wide">
-					{cap(name)}
-				</li>
-			);
+			const inner = <li className="text-xs">{cap(name)}</li>;
 			return (
 				<ul className="ml-4 list-disc font-mont" key={name}>
 					{inner}
@@ -40,11 +36,11 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 	};
 
 	const cns = cn({
-		'py-5 px-8 flex flex-row cursor-pointer transition-all hover:bg-gray-700': true,
+		'py-6 px-8 w-full flex flex-row text-left cursor-pointer transition-all hover:bg-opacity-20 hover:bg-cardhover': true,
 	});
 
 	return (
-		<div className={cns} onClick={openModal}>
+		<button className={cns} onClick={openModal}>
 			<div className="h-16 w-16 mr-4 flex-shrink-0">
 				<Image name={data.name} shadow></Image>
 			</div>
@@ -55,8 +51,8 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 			</div>
 			<MatModal onClose={closeModal} isOpen={showModal}>
 				<div className="text-center uppercase mb-8">
-					<h1 className="mb-0">{data.name}</h1>
-					<h3 className="text-gray-500">
+					<h1>{data.name}</h1>
+					<h3 className="text-textweak">
 						{characters.length
 							? 'Talent material'
 							: 'Weapon ascension material'}
@@ -96,7 +92,7 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 					</ul>
 				</div>
 			</MatModal>
-		</div>
+		</button>
 	);
 };
 MatCard.propTypes = {

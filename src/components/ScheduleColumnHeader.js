@@ -9,13 +9,13 @@ const dayIdxs = {
 };
 
 const renderDayTitle = (dayPair, todayIdx) => {
-	const todayCn = (idx) => cn({ 'text-yellow-100': todayIdx === idx });
+	const todayCn = (idx) => cn('', { 'text-yellow-100': todayIdx === idx });
 	switch (dayPair) {
 		case 'monthur':
 			return (
 				<>
 					<span className={todayCn(1)}>Mon</span> /{' '}
-					<span className={todayCn(4)}>Thur</span>
+					<span className={todayCn(4)}>Thu</span>
 				</>
 			);
 		case 'tuefri':
@@ -40,14 +40,8 @@ const renderDayTitle = (dayPair, todayIdx) => {
 const ScheduleColumnHeader = ({ day }) => {
 	const todayIdx = getDay(new Date());
 	const isToday = dayIdxs[day].includes(todayIdx);
-	const cns = cn(
-		'p-8 grid place-content-center bg-opacity-20 border-t-4 border-yellow-200',
-		{
-			'border-opacity-0': !isToday,
-			'column-header-glow border-opacity-50': isToday,
-		}
-	);
-	const headerCns = cn('m-0 text-gray-300', {});
+	const cns = cn('p-8 grid place-content-center bg-columnheader');
+	const headerCns = cn('m-0 text-columnheadertext', {});
 	return (
 		<div className={cns}>
 			<h1 className={headerCns}>{renderDayTitle(day, todayIdx)}</h1>
