@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { useLocalStorage, useMedia } from 'react-use';
-import Schedule from './Schedule';
-import TabbedSchedule from './TabbedSchedule';
-import NavButton from './NavButton';
 import { Calendar, Info, Users } from 'react-feather';
+import { useLocalStorage, useMedia } from 'react-use';
+import { todayIdx } from '../days';
 import About from './About';
 import CustomizeView from './CustomizeView';
-import Placeholder from './Placeholder';
+import NavButton from './NavButton';
+import Notice from './Notice';
+import Schedule from './Schedule';
+import TabbedSchedule from './TabbedSchedule';
 
 const Views = {
 	schedule: 'schedule',
@@ -91,17 +92,33 @@ const App = () => {
 		});
 	};
 
-	const renderPlaceholder = () => {
+	const renderNoDataNotice = () => {
 		if (
 			!Object.keys(selectedCharacters).length &&
 			!Object.keys(selectedWeapons).length
 		) {
 			return (
-				<Placeholder
-					onLink={() => {
-						setView('customize');
-					}}
-				></Placeholder>
+				<Notice>
+					<span>You haven't set any characters or weapons yet. </span>
+					<span
+						className="fake-link"
+						onClick={() => {
+							setView(Views.customize);
+						}}
+					>
+						Customize your schedule
+					</span>
+				</Notice>
+			);
+		}
+	};
+
+	const renderSundayNotice = () => {
+		if (todayIdx === 0) {
+			return (
+				<Notice>
+					<span>It's Sunday - domain drops vary.</span>
+				</Notice>
 			);
 		}
 	};
@@ -117,7 +134,8 @@ const App = () => {
 					{renderNavButtons()}
 				</nav>
 				<div id="main" className="flex-grow md:py-12">
-					{view === 'schedule' && renderPlaceholder()}
+					{view === 'schedule' && renderNoDataNotice()}
+					{view === 'schedule' && renderSundayNotice()}
 					{renderView()}
 				</div>
 				<footer className="flex-grow-0 p-2 text-xs text-white opacity-30">

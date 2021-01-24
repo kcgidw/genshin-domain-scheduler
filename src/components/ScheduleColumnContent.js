@@ -13,8 +13,8 @@ const ScheduleColumnContent = ({
 }) => {
 	if (!mats.length) {
 		return (
-			<div className="h-16 flex-grow grid place-content-center">
-				<h3 className="text-gray-500">No domain materials today</h3>
+			<div className="h-32 pb-8 flex-grow grid place-content-center">
+				<h3 className="opacity-30">No domain materials today</h3>
 			</div>
 		);
 	}

@@ -45,8 +45,9 @@ body {
 	@apply text-textbase;
 }
 
-a {
-	@apply underline text-link hover:text-linkhover;
+a,
+.fake-link {
+	@apply underline text-link hover:text-linkhover cursor-pointer;
 }
 
 p {
@@ -78,6 +79,10 @@ li::marker {
 
 .column-glow {
 	box-shadow: inset 0 16px 16px -18px rgb(119, 117, 90);
+}
+
+.notice-fade {
+	box-shadow: inset 320px 0px 320px -320px var(--cardbase);
 }
 
 .modal {
