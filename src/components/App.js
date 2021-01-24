@@ -106,7 +106,7 @@ const App = () => {
 							setView(Views.customize);
 						}}
 					>
-						Customize your schedule
+						Customize your schedule.
 					</span>
 				</Notice>
 			);
@@ -123,6 +123,15 @@ const App = () => {
 		}
 	};
 
+	const renderNotices = () => {
+		return (
+			<div className="m-auto md:w-max mb-8">
+				{renderNoDataNotice()}
+				{renderSundayNotice()}
+			</div>
+		);
+	};
+
 	return (
 		<div id="app-bg" className="dark">
 			<div id="modal-target"></div>
@@ -134,8 +143,7 @@ const App = () => {
 					{renderNavButtons()}
 				</nav>
 				<div id="main" className="flex-grow md:py-12">
-					{view === 'schedule' && renderNoDataNotice()}
-					{view === 'schedule' && renderSundayNotice()}
+					{view === 'schedule' && renderNotices()}
 					{renderView()}
 				</div>
 				<footer className="flex-grow-0 p-2 text-xs text-white opacity-30">

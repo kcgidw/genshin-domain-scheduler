@@ -82,7 +82,7 @@ li::marker {
 }
 
 .notice-fade {
-	box-shadow: inset 320px 0px 320px -320px var(--cardbase);
+	background: linear-gradient(90deg, var(--cardbase) -25%, transparent 75%);
 }
 
 .modal {
