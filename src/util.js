@@ -4,8 +4,8 @@ import capitalize from 'lodash/capitalize';
 const cap = (str) => {
 	return str
 		.split(' ')
-		.map((substr) => {
-			if (['of', 'to', 'the'].includes(substr)) {
+		.map((substr, i) => {
+			if (i > 0 && ['of', 'to', 'the'].includes(substr)) {
 				return substr;
 			}
 			return capitalize(substr);
