@@ -8,6 +8,7 @@ const map = {
 	bennett: {},
 	chongyun: {},
 	diluc: {},
+	diona: {},
 	fischl: {},
 	ganyu: {},
 	// hu tao:{}
@@ -24,7 +25,7 @@ const map = {
 	sucrose: {},
 	venti: {},
 	xiangling: {},
-	// xiao: {},
+	xiao: {},
 	xingqiu: {},
 	xinyan: {},
 	zhongli: {},

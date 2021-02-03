@@ -16,7 +16,7 @@ const data = {
 		characters: ['fischl', 'kaeya', 'lisa', 'venti', 'albedo'],
 	},
 	prosperity: {
-		characters: ['keqing', 'ningguang', 'qiqi'],
+		characters: ['keqing', 'ningguang', 'qiqi', 'xiao'],
 	},
 	diligence: {
 		characters: ['chongyun', 'xiangling', 'ganyu'],
