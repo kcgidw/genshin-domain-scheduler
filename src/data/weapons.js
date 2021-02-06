@@ -98,6 +98,10 @@ const data = {
 	'dragonspine spear': {},
 	frostbearer: {},
 	'summit shaper': {},
+	'primordial jade cutter': {},
+	'lithic spear': {},
+	'lithic blade': {},
+	'staff of homa': {},
 };
 
 export default named(data);

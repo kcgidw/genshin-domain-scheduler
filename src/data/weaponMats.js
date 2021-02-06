@@ -85,6 +85,7 @@ const data = {
 			'white tassel': true,
 			whiteblind: true,
 			'summit shaper': true,
+			'lithic blade': true,
 		},
 	},
 	elixir: {
@@ -103,6 +104,7 @@ const data = {
 			'royal spear': true,
 			'the unforged': true,
 			'twin nephrite': true,
+			'primordial jade cutter': true,
 		},
 	},
 	aerosiderite: {
@@ -118,6 +120,8 @@ const data = {
 			'skyrider greatsword': true,
 			'skyrider sword': true,
 			'vortex vanquisher': true,
+			'lithic spear': true,
+			'staff of homa': true,
 		},
 	},
 };
