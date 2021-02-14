@@ -18,6 +18,8 @@
 	--cardbase: var(--primary8);
 	--cardhover: var(--primary7);
 	--columnheader: transparent;
+	--columnheadertext: var(--primary3);
+	--columnheaderhighlight: #fef08a;
 	--link: hsl(215, 90%, 75%);
 	--linkhover: hsl(215, 90%, 80%);
 	--tab: var(--primary7);
@@ -62,8 +64,9 @@
 	--cardborder: var(--primary0);
 	--cardbase: var(--primary1);
 	--cardhover: var(--primary2);
-	--columnheader: var(--primary3);
+	--columnheader: transparent;
 	--columnheadertext: var(--primary6);
+	--columnheaderhighlight: var(--primary9);
 	--link: hsl(200, 100%, 50%);
 	--linkhover: hsl(200, 100%, 30%);
 	--tab: var(--secondary6);
@@ -82,4 +85,5 @@
 	--navcurrent: var(--primary8);
 	--navhover: var(--primary8);
 	--rosterbutton: var(--primary2);
+	--highlight: #00d652;
 }

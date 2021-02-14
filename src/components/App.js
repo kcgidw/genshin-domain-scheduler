@@ -92,42 +92,36 @@ const App = () => {
 		});
 	};
 
-	const renderNoDataNotice = () => {
-		if (
-			!Object.keys(selectedCharacters).length &&
-			!Object.keys(selectedWeapons).length
-		) {
-			return (
-				<Notice>
-					<span>You haven't set any characters or weapons yet. </span>
-					<span
-						className="fake-link"
-						onClick={() => {
-							setView(Views.customize);
-						}}
-					>
-						Customize your schedule.
-					</span>
-				</Notice>
-			);
-		}
-	};
-
-	const renderSundayNotice = () => {
-		if (todayIdx === 0) {
-			return (
-				<Notice>
-					<span>It's Sunday - domain drops vary.</span>
-				</Notice>
-			);
-		}
-	};
-
 	const renderNotices = () => {
+		const sunday = todayIdx === 0;
+		const noData =
+			!Object.keys(selectedCharacters).length &&
+			!Object.keys(selectedWeapons).length;
+
+		if (!sunday && !noData) return null;
+
 		return (
 			<div className="m-auto md:w-max mb-8">
-				{renderNoDataNotice()}
-				{renderSundayNotice()}
+				{noData && (
+					<Notice>
+						<span>
+							You haven't set any characters or weapons yet.{' '}
+						</span>
+						<span
+							className="fake-link"
+							onClick={() => {
+								setView(Views.customize);
+							}}
+						>
+							Customize your schedule.
+						</span>
+					</Notice>
+				)}
+				{sunday && (
+					<Notice>
+						<span>It's Sunday - domain drops vary.</span>
+					</Notice>
+				)}
 			</div>
 		);
 	};

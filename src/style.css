@@ -32,7 +32,7 @@
 }
 
 body {
-	@apply h-screen bg-gray-900 font-sans;
+	@apply h-screen font-sans;
 }
 
 #app {
@@ -74,7 +74,10 @@ li::marker {
 }
 
 .column-glow {
-	box-shadow: inset 0 48px 48px -48px hsla(56, 30%, 60%, 0.2);
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	box-shadow: inset 0 48px 48px -48px var(--columnheaderhighlight);
 }
 
 .notice-fade {

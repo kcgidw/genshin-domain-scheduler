@@ -30,6 +30,7 @@ module.exports = {
 			cardborder: 'var(--cardborder)',
 			columnheader: 'var(--columnheader)',
 			columnheadertext: 'var(--columnheadertext)',
+			columnheaderhighlight: 'var(--columnheaderhighlight)',
 			link: 'var(--link)',
 			linkhover: 'var(--linkhover)',
 			navtext: 'var(--navtext)',

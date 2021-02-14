@@ -9,7 +9,8 @@ const dayIdxs = {
 };
 
 const renderDayTitle = (dayPair, todayIdx) => {
-	const todayCn = (idx) => cn('', { 'text-yellow-100': todayIdx === idx });
+	const todayCn = (idx) =>
+		cn('', { 'text-columnheaderhighlight': todayIdx === idx });
 	switch (dayPair) {
 		case 'monthur':
 			return (

@@ -52,11 +52,6 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 			<MatModal onClose={closeModal} isOpen={showModal}>
 				<div className="text-center uppercase mb-8">
 					<h1>{data.name}</h1>
-					<h3 className="text-textweak">
-						{characters.length
-							? 'Talent material'
-							: 'Weapon ascension material'}
-					</h3>
 					<div className="m-auto my-6 h-20 w-20 flex justify-center">
 						<Image name={data.name} shadow></Image>
 					</div>
@@ -68,7 +63,11 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 					- {cap(domainData.location.join(', '))}
 				</div>
 				<div>
-					<div className="mb-1">Use for:</div>
+					<div className="mb-1">
+						{characters.length
+							? 'Talent material for:'
+							: 'Weapon ascension material for:'}
+					</div>
 					<ul className="space-y-2">
 						{characters.map((charaName) => {
 							return (
