@@ -19,7 +19,7 @@ const data = {
 		characters: ['keqing', 'ningguang', 'qiqi', 'xiao'],
 	},
 	diligence: {
-		characters: ['chongyun', 'xiangling', 'ganyu'],
+		characters: ['chongyun', 'xiangling', 'ganyu', 'hu tao'],
 	},
 	gold: {
 		characters: ['xingqiu', 'beidou', 'zhongli', 'xinyan'],

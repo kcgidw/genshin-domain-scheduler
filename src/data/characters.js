@@ -11,7 +11,7 @@ const map = {
 	diona: {},
 	fischl: {},
 	ganyu: {},
-	// hu tao:{}
+	'hu tao': {},
 	kaeya: {},
 	jean: {},
 	keqing: {},
@@ -22,7 +22,9 @@ const map = {
 	noelle: {},
 	qiqi: {},
 	razor: {},
+	// rosaria: {},
 	sucrose: {},
+	tartaglia: {},
 	venti: {},
 	xiangling: {},
 	xiao: {},
