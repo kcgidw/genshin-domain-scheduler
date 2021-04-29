@@ -10,10 +10,18 @@ const data = {
 		],
 	},
 	resistance: {
-		characters: ['bennett', 'diluc', 'jean', 'mona', 'noelle', 'razor'],
+		characters: [
+			'bennett',
+			'diluc',
+			'jean',
+			'mona',
+			'noelle',
+			'razor',
+			'eula',
+		],
 	},
 	ballad: {
-		characters: ['fischl', 'kaeya', 'lisa', 'venti', 'albedo'],
+		characters: ['fischl', 'kaeya', 'lisa', 'venti', 'albedo', 'rosaria'],
 	},
 	prosperity: {
 		characters: ['keqing', 'ningguang', 'qiqi', 'xiao'],
@@ -22,7 +30,7 @@ const data = {
 		characters: ['chongyun', 'xiangling', 'ganyu', 'hu tao'],
 	},
 	gold: {
-		characters: ['xingqiu', 'beidou', 'zhongli', 'xinyan'],
+		characters: ['xingqiu', 'beidou', 'zhongli', 'xinyan', 'yanfei'],
 	},
 };
 

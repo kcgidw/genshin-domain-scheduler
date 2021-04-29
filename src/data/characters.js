@@ -9,6 +9,7 @@ const map = {
 	chongyun: {},
 	diluc: {},
 	diona: {},
+	eula: {},
 	fischl: {},
 	ganyu: {},
 	'hu tao': {},
@@ -22,7 +23,7 @@ const map = {
 	noelle: {},
 	qiqi: {},
 	razor: {},
-	// rosaria: {},
+	rosaria: {},
 	sucrose: {},
 	tartaglia: {},
 	venti: {},
@@ -30,6 +31,7 @@ const map = {
 	xiao: {},
 	xingqiu: {},
 	xinyan: {},
+	yanfei: {},
 	zhongli: {},
 };
 

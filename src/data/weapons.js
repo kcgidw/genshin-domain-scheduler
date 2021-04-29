@@ -102,6 +102,9 @@ const data = {
 	'lithic spear': {},
 	'lithic blade': {},
 	'staff of homa': {},
+	'elegy for the end': {},
+	'the alley flash': {},
+	'windblume ode': {},
 };
 
 export default named(data);

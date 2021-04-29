@@ -18,6 +18,7 @@ const data = {
 			'the stringless': true,
 			'the viridescent hunt': true,
 			'snow-tombed starsilver': true,
+			'the alley flash': true,
 		},
 	},
 	'boreal wolf': {
@@ -44,6 +45,7 @@ const data = {
 			'waster greatsword': true,
 			'wine and song': true,
 			'dragonspine spear': true,
+			'elegy for the end': true,
 		},
 	},
 	'dandelion gladiator': {
@@ -67,6 +69,7 @@ const data = {
 			"wolf's gravestone": true,
 			'festering desire': true,
 			frostbearer: true,
+			'windblume ode': true,
 		},
 	},
 	guyun: {
