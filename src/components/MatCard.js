@@ -5,7 +5,7 @@ import Image from './Image';
 import { cap } from '../util';
 import MatModal from './MatModal';
 
-const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
+const MatCard = ({ domainData, matName, characters = [], weapons = [] }) => {
 	const [showModal, setShowModal] = useState(false);
 	const openModal = () => {
 		setShowModal(true);
@@ -42,18 +42,18 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 	return (
 		<button className={cns} onClick={openModal}>
 			<div className="h-16 w-16 mr-4 flex-shrink-0">
-				<Image name={data.name} shadow></Image>
+				<Image name={matName} shadow></Image>
 			</div>
 			<div className="flex flex-col flex-grow">
-				<h3 className="mb-1 uppercase">{data.name}</h3>
+				<h3 className="mb-1 uppercase">{matName}</h3>
 				{renderCharacters()}
 				{renderWeapons()}
 			</div>
 			<MatModal onClose={closeModal} isOpen={showModal}>
 				<div className="text-center uppercase mb-8">
-					<h1>{data.name}</h1>
+					<h1>{matName}</h1>
 					<div className="m-auto my-6 h-20 w-20 flex justify-center">
-						<Image name={data.name} shadow></Image>
+						<Image name={matName} shadow></Image>
 					</div>
 				</div>
 				<div className="mb-8">
@@ -95,7 +95,7 @@ const MatCard = ({ data, domainData, characters = [], weapons = [] }) => {
 	);
 };
 MatCard.propTypes = {
-	data: PropTypes.object.isRequired,
+	matName: PropTypes.string.isRequired,
 	characters: PropTypes.array,
 	weapons: PropTypes.array,
 };

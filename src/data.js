@@ -1,16 +1,14 @@
-import talentMats from './data/talentMats';
-import weaponMats from './data/weaponMats';
 import memoize from 'lodash/memoize';
 import domains from './data/domains';
-import characters from './data/characters';
-import weapons from './data/weapons';
+import units from './data/units.json';
+import weapons from './data/weapons.json';
 
 const getDomainData = memoize((matName) => {
 	const domainName = Object.keys(domains).find((domainName) => {
 		const domainData = domains[domainName];
 		return Object.values(domainData.dropSchedule).includes(matName);
 	});
-	return domains[domainName]
+	return domains[domainName];
 });
 
 const matsByDay = {
@@ -24,62 +22,53 @@ Object.values(domains).forEach((domData) => {
 	matsByDay.wedsat[domData.dropSchedule.wedsat] = true;
 });
 
+function getTalentMatFor(unitName) {
+	return units.find((u) => u.name === unitName).talentMat;
+}
+function getAscMatFor(weaponName) {
+	return weapons.find((w) => w.name === weaponName).ascMat;
+}
+
+const doesUnitUseMat = (unitName, talentMat) => {
+	return units.find((u) => u.name === unitName).talentMat === talentMat;
+};
+
 // Returns true when mat is applicable for any chara in selection
-const doesTalentMatApply = (matData, selection) => {
-	return (
-		matData.characters &&
-		matData.characters.some((charaName) => selection[charaName])
+const doesTalentMatApply = (matName, selection) => {
+	return Object.keys(selection).some((unitName) =>
+		doesUnitUseMat(unitName, matName)
 	);
 };
-const doesWeaponMatApply = (matData, selection) => {
-	return (
-		matData.weapons &&
-		Object.keys(matData.weapons).some((charaName) => selection[charaName])
+
+const doesWeaponUseMat = (weaponName, matName) => {
+	return weapons.find((w) => w.name === weaponName).ascMat === matName;
+};
+
+const doesWeaponMatApply = (matName, selection) => {
+	return Object.keys(selection).some((weaponName) =>
+		doesWeaponUseMat(weaponName, matName)
 	);
 };
 
 const getScheduledMatsForDay = (day, characters, weapons) => {
-	return Object.keys(matsByDay[day])
-		.filter((matName) => {
-			const matData = getMatData(matName);
-			if (matData) {
-				return (
-					doesTalentMatApply(matData, characters) ||
-					doesWeaponMatApply(matData, weapons)
-				);
-			}
-			return false;
-		})
-		.map(getMatData);
+	return Object.keys(matsByDay[day]).filter((matName) => {
+		return (
+			doesTalentMatApply(matName, characters) ||
+			doesWeaponMatApply(matName, weapons)
+		);
+	});
 };
 
-const getMatData = (name) => {
-	const data = talentMats[name] || weaponMats[name];
-	if (!data) {
-		console.warn(`No matData for ${name}`);
-	}
-	return data;
-};
-
-const getSelectedCharactersForMat = (charaSelectionSet, matData) => {
+const getSelectedCharactersForMat = (charaSelectionSet, matId) => {
 	return Object.keys(charaSelectionSet)
-		.filter((charaName) => {
-			return matData.characters && matData.characters.includes(charaName);
-		})
+		.filter((u) => getTalentMatFor(u) === matId)
 		.sort();
 };
 
-const getSelectedWeaponsForMat = (weaponSet, matData) => {
-	return Object.keys(weaponSet)
-		.filter((name) => {
-			return matData.weapons && matData.weapons[name];
-		})
+const getSelectedWeaponsForMat = (weaponSelectionSet, matId) => {
+	return Object.keys(weaponSelectionSet)
+		.filter((w) => getAscMatFor(w) === matId)
 		.sort();
-};
-
-const allCharacters = Object.values(characters);
-const getAllCharacters = () => {
-	return allCharacters;
 };
 
 const allWeapons = Object.keys(weapons)
@@ -90,7 +79,6 @@ const getAllWeapons = () => {
 };
 
 export {
-	getAllCharacters,
 	getAllWeapons,
 	getDomainData,
 	getScheduledMatsForDay,

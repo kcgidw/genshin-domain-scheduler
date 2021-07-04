@@ -4,11 +4,12 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "cross-env NODE_ENV=production webpack --env production",
+		"build": "npm run data && cross-env NODE_ENV=production webpack --env production",
 		"clean": "rm -rf dist/",
 		"dev": "webpack serve",
 		"start": "serve dist/",
-		"fresh": "npm run clean && npm run build && npm run start"
+		"fresh": "npm run clean && npm run build && npm run start",
+		"data": "node src/data/buildData.mjs"
 	},
 	"keywords": [],
 	"author": "",
@@ -27,6 +28,7 @@
 		"cross-env": "^7.0.3",
 		"css-loader": "^5.x",
 		"css-minimizer-webpack-plugin": "^1.1.5",
+		"csv": "^5.5.0",
 		"date-fns": "^2.16.1",
 		"extract-loader": "^5.x",
 		"file-loader": "^6.0.0",

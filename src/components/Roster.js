@@ -1,10 +1,10 @@
 import React from 'react';
-import { getAllCharacters } from '../data';
+import units from '../data/units.json';
 import CharacterButton from './CharacterButton';
 
 const Roster = ({ selection = {}, onSelectionChange }) => {
 	const renderItems = () => {
-		return getAllCharacters().map((item) => {
+		return units.map((item) => {
 			const onToggle = () => {
 				const newSelection = { ...selection };
 				if (selection[item.name]) {

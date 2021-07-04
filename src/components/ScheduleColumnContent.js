@@ -27,9 +27,9 @@ const ScheduleColumnContent = ({
 					mat
 				)}
 				weapons={getSelectedWeaponsForMat(selectedWeapons, mat)}
-				data={mat}
-				domainData={getDomainData(mat.name)}
-				key={mat.name}
+				matName={mat}
+				domainData={getDomainData(mat)}
+				key={mat}
 			></MatCard>
 		));
 	};
