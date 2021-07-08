@@ -1,12 +1,6 @@
 import getDay from 'date-fns/getDay';
 
-const days = {
-	monthur: 'monthur',
-	tuefri: 'tuefri',
-	wedsat: 'wedsat',
-};
-
-const list = Object.keys(days);
+const dayTuples = ['mt', 'tf', 'ws'];
 
 const todayIdx = getDay(new Date());
 
@@ -22,4 +16,4 @@ const isDayPairToday = (dayPair) => {
 	return false; // sunday
 };
 
-export { list, days, todayIdx, isDayPairToday };
+export { dayTuples, todayIdx, isDayPairToday };

@@ -1,18 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
-const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const CssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = (env = {}) => {
 	const prod = env.production;
 
 	const config = {
 		mode: prod ? 'production' : 'development',
-		entry: ['./src/index.js'],
+		entry: ['./src/main.js'],
 		output: {
 			path: path.resolve(__dirname, 'dist'),
 			filename: 'index.bundle.min.js',
@@ -27,34 +27,18 @@ module.exports = (env = {}) => {
 				{
 					test: /\.js$/,
 					exclude: /node_modules/,
-					use: [
-						'source-map-loader',
-						{
-							loader: 'babel-loader',
-							options: {
-								plugins: [
-									!prod &&
-										require.resolve('react-refresh/babel'),
-								].filter(Boolean),
-							},
-						},
-					],
+					use: ['source-map-loader', 'babel-loader'],
 				},
-				// {
-				// 	test: /\.html$/,
-				// 	use: [
-				// 		{
-				// 			loader: 'file-loader',
-				// 			options: { name: '[name].html' },
-				// 		},
-				// 	],
-				// },
+				{
+					test: /\.vue$/,
+					loader: 'vue-loader',
+				},
 				{
 					test: /\.(sc|sa|pc|c)ss$/,
 					use: [
 						prod ? CssExtractPlugin.loader : 'style-loader',
 						'css-loader',
-						'postcss-loader',
+						'sass-loader',
 					],
 				},
 				{
@@ -74,9 +58,9 @@ module.exports = (env = {}) => {
 			new HtmlPlugin({
 				template: './src/index.html',
 			}),
+			new VueLoaderPlugin(),
 			new CompressionPlugin(),
 			!prod && new webpack.HotModuleReplacementPlugin(),
-			!prod && new ReactRefreshPlugin(),
 			prod &&
 				new CssExtractPlugin({
 					filename: 'style-[contenthash].css',

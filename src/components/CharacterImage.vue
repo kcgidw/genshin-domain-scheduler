@@ -1,6 +1,8 @@
-import React from 'react';
-import cn from 'classnames';
+<template>
+	<img :src="images[name]" />
+</template>
 
+<script>
 // Dynamic image import
 const images = {};
 const importAll = (req) => {
@@ -12,11 +14,14 @@ const importAll = (req) => {
 };
 importAll(require.context('../assets', false, /\.(png|webp)$/));
 
-const CharacterImage = ({ name, shadow }) => {
-	const cns = cn('h-full object-contain inline', {
-		'filter-shadow': shadow,
-	});
-	return <img className={cns} src={images[name]}></img>;
+export default {
+	props: {
+		name: String,
+	},
+	data() {
+		return { images };
+	},
 };
+</script>
 
-export default CharacterImage;
+<style></style>
