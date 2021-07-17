@@ -3,41 +3,41 @@ const data = {
 		location: ['springvale', 'mondstadt'],
 		type: 'talent',
 		dropSchedule: {
-			monthur: 'freedom',
-			tuefri: 'resistance',
-			wedsat: 'ballad',
+			mt: 'freedom',
+			tf: 'resistance',
+			ws: 'ballad',
 		},
 	},
 	'taishan mansion': {
 		location: ['jueyun karst', 'liyue'],
 		type: 'talent',
 		dropSchedule: {
-			monthur: 'prosperity',
-			tuefri: 'diligence',
-			wedsat: 'gold',
+			mt: 'prosperity',
+			tf: 'diligence',
+			ws: 'gold',
 		},
 	},
 	'cecilia garden': {
 		location: ['springvale', 'mondstadt'],
 		type: 'weapon',
 		dropSchedule: {
-			monthur: 'decarabian',
-			tuefri: 'boreal wolf',
-			wedsat: 'dandelion gladiator',
+			mt: 'decarabian',
+			tf: 'boreal wolf',
+			ws: 'dandelion gladiator',
 		},
 	},
 	'hidden palace of lianshan formula': {
 		location: ['mingyun village', 'liyue'],
 		type: 'weapon',
 		dropSchedule: {
-			monthur: 'guyun',
-			tuefri: 'elixir',
-			wedsat: 'aerosiderite',
+			mt: 'guyun',
+			tf: 'elixir',
+			ws: 'aerosiderite',
 		},
 	},
 };
 
-Object.keys(data).forEach((key) => {
+Object.keys(data).forEach(key => {
 	data[key].name = key;
 });
 

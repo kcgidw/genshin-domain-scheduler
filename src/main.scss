@@ -1,0 +1,65 @@
+@use 'node_modules/modern-normalize/modern-normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+	//https://mdigi.tools/color-shades/#864ca3
+	--gr0: hsl(250, 12%, 97%);
+	--gr1: hsl(250, 12%, 90%);
+	--gr2: hsl(250, 12%, 80%);
+	--gr3: hsl(250, 12%, 61%);
+	--gr4: hsl(250, 12%, 50%);
+	--gr5: hsl(250, 15%, 39%);
+	--gr6: hsl(250, 15%, 28%);
+	--gr7: hsl(250, 15%, 20%);
+	--gr8: hsl(250, 15%, 10%);
+	--acc0: hsl(164, 96%, 90%);
+	--acc1: hsl(164, 97%, 70%);
+	--acc2: hsl(164, 97%, 50%);
+	--acc3: hsl(164, 97%, 30%);
+	--red1: hsl(0, 100%, 70%);
+	--red2: hsl(0, 100%, 66%);
+}
+
+.light {
+	--p0: hsl(250, 20%, 93%);
+	--p1: hsl(250, 20%, 83%);
+	--p2: hsl(250, 20%, 72%);
+	--p3: hsl(250, 20%, 61%);
+	--p4: hsl(250, 20%, 50%);
+	--p5: hsl(250, 23%, 39%);
+	--p6: hsl(245, 28%, 32%);
+	--p7: hsl(245, 28%, 20%);
+	--p8: hsl(245, 28%, 10%);
+	--shadow: 0 4px 8px -2px hsla(240, 30%, 5%, 0.4);
+	background: var(--p6);
+}
+
+body {
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+.card {
+	box-shadow: var(--shadow);
+	border-radius: 3px;
+	background: var(--p5);
+	color: var(--p1);
+	overflow: hidden;
+}
+
+button {
+	cursor: pointer;
+	outline: none;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: normal;
+}

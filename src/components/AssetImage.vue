@@ -1,12 +1,12 @@
 <template>
-	<img :src="images[name]" />
+	<img class="asset-img" :src="images[name]" v-if="images[name]" />
 </template>
 
 <script>
 // Dynamic image import
 const images = {};
-const importAll = (req) => {
-	req.keys().forEach((key) => {
+const importAll = req => {
+	req.keys().forEach(key => {
 		// "./abc.png" to "abc"
 		const imageName = key.substring(2).replace(/\..*$/, '');
 		images[imageName] = req(key).default;
@@ -24,4 +24,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.asset-img{
+	object-fit: contain;
+}
+</style>></style>

@@ -1,21 +1,21 @@
 <template>
 	<div class="schedule-container">
 		<div class="schedule">
-			<div class="col" v-for="dt in dayTuples" :key="dt">
-				<div>{{ dt }}</div>
-			</div>
+			<column v-for="dt in dayPairs" :key="dt" :dayPair="dt" />
 		</div>
 	</div>
 </template>
 
 <script>
 import Store from '../../store';
-import { dayTuples } from '../../days';
+import { dayPairs } from '../../days';
+import ScheduleHeader from './ScheduleHeader.vue';
+import Column from './Column.vue';
 export default {
 	data() {
 		return {
 			Store,
-			dayTuples,
+			dayPairs,
 		};
 	},
 	methods: {
@@ -23,27 +23,24 @@ export default {
 			this.curTab = tab;
 		},
 	},
-	components: {},
+	components: { ScheduleHeader, Column },
 };
 </script>
 
 <style lang="scss" scoped>
 .schedule-container {
-	height: 100%;
+	min-height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .schedule {
+	margin: 8px;
 	display: grid;
 	grid-auto-flow: column;
-	grid-template-columns: repeat(3, 20rem);
+	grid-template-columns: repeat(3, minmax(15rem, 1fr));
 	grid-gap: 1rem;
-
-	.col {
-		padding: 1rem;
-		border: solid 2px;
-		border-radius: 4px;
-	}
+	width: 100%;
+	max-width: 60rem;
 }
 </style>

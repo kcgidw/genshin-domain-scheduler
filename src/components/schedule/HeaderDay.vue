@@ -1,12 +1,22 @@
 <template>
-	<div class="schedule-header">{{ name }}</div>
+	<span
+		:class="{ 'schedule-header-day': true, today: todayIndex === dayIndex }"
+	>
+		{{ name }}
+	</span>
 </template>
 
 <script>
-const names = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+import { todayIdx } from '../../days';
+
+const names = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
 export default {
 	props: { dayIndex: Number },
-	methods: {
+	computed: {
+		todayIndex() {
+			return todayIdx;
+		},
 		name() {
 			return names[this.dayIndex];
 		},
@@ -14,4 +24,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.schedule-header-day {
+	// border-bottom: 2px solid transparent;
+	&.today {
+		color: var(--acc2);
+		// border-bottom: 2px solid var(--acc2);
+		// filter: drop-shadow(0 0 2px var(--acc2));
+	}
+}
+</style>
