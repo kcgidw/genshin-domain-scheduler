@@ -35,7 +35,7 @@ import Schedule from './components/schedule/Schedule.vue';
 import Roster from './components/roster/Roster.vue';
 import { CalendarIcon, UsersIcon, InfoIcon } from 'vue-feather-icons';
 import About from './components/About.vue';
-import Background from './components/background.vue';
+import Background from './components/Background.vue';
 export default {
 	data() {
 		return {

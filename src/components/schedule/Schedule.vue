@@ -1,5 +1,8 @@
 <template>
 	<div class="schedule-container">
+		<div class="sunday card" v-if="isSunday">
+			It's Sunday - domain drops vary.
+		</div>
 		<div class="schedule">
 			<column v-for="dt in dayPairs" :key="dt" :dayPair="dt" />
 		</div>
@@ -8,7 +11,7 @@
 
 <script>
 import Store from '../../store';
-import { dayPairs } from '../../days';
+import { dayPairs, todayIdx } from '../../days';
 import ScheduleHeader from './ScheduleHeader.vue';
 import Column from './Column.vue';
 export default {
@@ -23,6 +26,11 @@ export default {
 			this.curTab = tab;
 		},
 	},
+	computed: {
+		isSunday() {
+			return todayIdx === 0;
+		},
+	},
 	components: { ScheduleHeader, Column },
 };
 </script>
@@ -33,6 +41,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 .schedule {
 	margin: 8px;
@@ -42,5 +51,9 @@ export default {
 	grid-gap: 1rem;
 	width: 100%;
 	max-width: 60rem;
+}
+.sunday {
+	padding: 1rem 2rem;
+	margin: 2rem;
 }
 </style>
