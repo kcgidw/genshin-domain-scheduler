@@ -5,6 +5,7 @@
 			v-for="t in themes"
 			:key="t"
 			:selected="Store.state.theme === t"
+			disableToggleOff
 			@click="selectTheme(t)"
 		>
 			{{ cap(t) }}

@@ -2,6 +2,7 @@
 	<button
 		:class="{
 			'toggle-btn': true,
+			'disable-off': disableToggleOff,
 			selected,
 		}"
 		@click="click"
@@ -14,6 +15,7 @@
 export default {
 	props: {
 		selected: Boolean,
+		disableToggleOff: Boolean, // Don't show hover styles for 'on' state
 	},
 	methods: {
 		click(e) {
@@ -34,9 +36,12 @@ export default {
 		background: var(--acc1);
 		color: var(--acc4);
 		border-color: var(--acc3);
-		&:hover,
-		&:focus-visible {
-			opacity: 0.7;
+
+		&:not(.disable-off) {
+			&:hover,
+			&:focus-visible {
+				opacity: 0.7;
+			}
 		}
 	}
 
