@@ -11,4 +11,4 @@ yarn.lock
 *.min.*
 dist/
 ignore/
-src/data/*.json
+data/*.json

@@ -4,11 +4,13 @@ Dead-simple personalized domain schedules for Genshin Impact.
 
 Data update/correction PRs very welcome!
 
-## Develop
+## Scripts
 
-Develop with hot reload: `npm run dev`.
+`dev`: dev mode
 
-Build & serve: `npm run build && npm run start`.
+`data`: Convert .csv files in data/ to json
+
+`build`: Build data and dist/ folder
 
 ## License
 
