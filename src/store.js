@@ -6,6 +6,7 @@ import {
 	getUnitData,
 	getWeaponData,
 } from './dataUtil';
+import themes from './themes';
 
 const Store = {
 	debug: true,
@@ -13,24 +14,37 @@ const Store = {
 	state: {
 		units: store('units') || [], // list of names
 		weapons: store('weapons') || [],
+		theme: store('theme') || themes[0],
 	},
 
 	save() {
 		store('units', this.state.units);
 		store('weapons', this.state.weapons);
+		store('theme', this.state.theme);
 	},
 
 	validate() {
 		for (const n of this.state.units) {
 			if (!data.units.some(u => u.name === n)) {
 				console.warn('bad unit', n);
+				this.state.units = [];
 			}
 		}
 		for (const n of this.state.weapons) {
 			if (!data.weapons.some(w => w.name === n)) {
 				console.warn('bad weapon', n);
+				this.state.weapons = [];
 			}
 		}
+		if (!themes.includes(this.state.theme)) {
+			console.warn('bad theme', this.state.theme);
+			this.state.theme = themes[0];
+		}
+	},
+
+	setTheme(x) {
+		this.state.theme = x;
+		this.save();
 	},
 
 	setUnits(x) {
@@ -60,6 +74,14 @@ const Store = {
 	removeWeapon(name) {
 		this.setWeapons(this.state.weapons.filter(n => n !== name));
 	},
+
+	isUnitSelected(name) {
+		return this.state.units.includes(name);
+	},
+	toggleUnit(name) {
+		this.isUnitSelected(name) ? this.removeUnit(name) : this.addUnit(name);
+	},
+
 	getUnselectedUnits() {
 		return data.units.filter(u => {
 			return !this.state.units.includes(u.name);

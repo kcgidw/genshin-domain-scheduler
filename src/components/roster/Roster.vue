@@ -14,9 +14,20 @@
 				>
 					<grid-icon size="1x" />Grid view (units)
 				</button>
+				<button
+					:class="{
+						'roster-tab': true,
+						selected: curTab === 'theme',
+					}"
+					@click="switchRosterTab('theme')"
+				>
+					<palette-icon />Theme
+				</button>
 			</div>
 			<div class="roster-tab-body">
 				<list-view v-show="curTab === 'list'" />
+				<grid-view v-show="curTab === 'grid'" />
+				<theme-view v-show="curTab === 'theme'" />
 			</div>
 		</div>
 	</div>
@@ -26,9 +37,12 @@
 import Store from '../../store';
 import AssetImage from '../AssetImage.vue';
 import { VueAutosuggest } from 'vue-autosuggest';
-import RosterButton from './RosterButton.vue';
+import ListItem from './ListItem.vue';
 import ListView from './ListView.vue';
+import GridView from './GridView.vue';
 import { ListIcon, GridIcon } from 'vue-feather-icons';
+import ThemeView from './ThemeView.vue';
+import PaletteIcon from '../PaletteIcon.vue';
 export default {
 	data() {
 		return {
@@ -44,10 +58,13 @@ export default {
 	components: {
 		AssetImage,
 		VueAutosuggest,
-		RosterButton,
+		ListItem,
 		ListView,
 		ListIcon,
 		GridIcon,
+		GridView,
+		ThemeView,
+		PaletteIcon,
 	},
 };
 </script>
@@ -67,7 +84,8 @@ export default {
 }
 .roster {
 	flex-grow: 1;
-	width: 45rem;
+	width: 100%;
+	max-width: 50rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -75,11 +93,11 @@ export default {
 	padding: 1rem 2rem 0;
 	display: flex;
 	flex-direction: row;
-	gap: 16px;
+	gap: 8px;
 	background: var(--p7);
 
 	button.roster-tab {
-		padding: 8px 12px;
+		padding: 8px 16px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -103,5 +121,9 @@ export default {
 }
 .roster-tab-body {
 	flex-grow: 1;
+}
+.icon-tabler {
+	height: 1rem;
+	width: 1rem;
 }
 </style>

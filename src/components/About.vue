@@ -2,13 +2,17 @@
 	<div class="about">
 		<h1>Genshin Domain Scheduler</h1>
 		<div>
-			<p>This fansite is not affiliated with or endorsed by miHoYo.</p>
 			<p>
 				<a href="https://github.com/kcgidw/genshin-domain-scheduler"
 					>Github</a
 				>
 			</p>
 			<p><a href="https://ko-fi.com/krackocloud">Kofi</a></p>
+			<p>
+				Note: The required talent mats for Traveler vary based on each
+				individual talent's element and level.
+			</p>
+			<p>This fansite is not affiliated with or endorsed by miHoYo.</p>
 		</div>
 	</div>
 </template>
@@ -27,7 +31,7 @@ export default {};
 		color: var(--p1);
 	}
 	a {
-		color: var(--acc2);
+		color: var(--acc1);
 	}
 }
 </style>

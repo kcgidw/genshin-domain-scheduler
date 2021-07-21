@@ -24,13 +24,13 @@
 					</button>
 				</template>
 			</vue-autosuggest>
-			<roster-button
+			<list-item
 				v-for="uname in Store.state.units"
 				:key="uname"
 				:name="uname"
 				@remove="uRemove(uname)"
 			>
-			</roster-button>
+			</list-item>
 		</div>
 		<div class="weapons">
 			<chevron-down-icon class="dropdown" size="1.25x" />
@@ -55,13 +55,13 @@
 					</button>
 				</template>
 			</vue-autosuggest>
-			<roster-button
+			<list-item
 				v-for="wname in Store.state.weapons"
 				:key="wname"
 				:name="wname"
 				@remove="wRemove(wname)"
 			>
-			</roster-button>
+			</list-item>
 		</div>
 	</div>
 </template>
@@ -70,7 +70,7 @@
 import Store from '../../store';
 import AssetImage from '../AssetImage.vue';
 import { VueAutosuggest } from 'vue-autosuggest';
-import RosterButton from './RosterButton.vue';
+import ListItem from './ListItem.vue';
 import { ChevronDownIcon } from 'vue-feather-icons';
 import { cap } from '../../util';
 
@@ -137,7 +137,7 @@ export default {
 			return cap(sugg.item.name);
 		},
 	},
-	components: { AssetImage, VueAutosuggest, RosterButton, ChevronDownIcon },
+	components: { AssetImage, VueAutosuggest, ListItem, ChevronDownIcon },
 };
 </script>
 
@@ -164,7 +164,7 @@ export default {
 		background: var(--p1);
 
 		&::placeholder {
-			color: var(--p3);
+			color: var(--p5);
 		}
 		&:focus {
 			outline: 0;

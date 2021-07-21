@@ -36,6 +36,8 @@ export default {
 	border-top: solid 4px transparent;
 	&.today {
 		border-top: solid 4px var(--acc2);
+		position: relative;
+		top: -2px;
 	}
 	&:not(.today) {
 		opacity: 0.6;

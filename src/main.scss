@@ -13,15 +13,11 @@
 	--gr6: hsl(250, 15%, 28%);
 	--gr7: hsl(250, 15%, 20%);
 	--gr8: hsl(250, 15%, 10%);
-	--acc0: hsl(164, 96%, 90%);
-	--acc1: hsl(164, 97%, 70%);
-	--acc2: hsl(164, 97%, 50%);
-	--acc3: hsl(164, 97%, 30%);
 	--red1: hsl(0, 100%, 70%);
 	--red2: hsl(0, 100%, 66%);
 }
 
-.light {
+.theme-purple {
 	--p0: hsl(250, 20%, 93%);
 	--p1: hsl(250, 20%, 83%);
 	--p2: hsl(250, 20%, 72%);
@@ -31,8 +27,36 @@
 	--p6: hsl(245, 28%, 32%);
 	--p7: hsl(245, 28%, 20%);
 	--p8: hsl(245, 28%, 10%);
+	--acc0: hsl(167, 96%, 85%);
+	--acc1: hsl(167, 97%, 75%);
+	--acc2: hsl(167, 97%, 50%);
+	--acc3: hsl(167, 97%, 30%);
+	--acc4: hsl(167, 97%, 15%);
 	--shadow: 0 4px 8px -2px hsla(240, 30%, 5%, 0.4);
-	background: var(--p6);
+}
+// bgs must be outside the theme to transition
+.bg-purple {
+	background: hsl(245, 28%, 32%);
+}
+.theme-night {
+	--p0: hsl(225, 45%, 95%);
+	--p1: hsl(225, 45%, 83%);
+	--p2: hsl(225, 45%, 77%);
+	--p3: hsl(225, 30%, 61%);
+	--p4: hsl(225, 25%, 50%);
+	--p5: hsl(225, 25%, 23%);
+	--p6: hsl(225, 25%, 18%);
+	--p7: hsl(225, 25%, 15%);
+	--p8: hsl(225, 25%, 10%);
+	--shadow: 0 4px 8px -2px hsla(220, 30%, 5%, 0.4);
+	--acc0: hsl(158, 96%, 85%);
+	--acc1: hsl(158, 97%, 75%);
+	--acc2: hsl(158, 97%, 50%);
+	--acc3: hsl(158, 97%, 25%);
+	--acc4: hsl(158, 97%, 15%);
+}
+.bg-night {
+	background: linear-gradient(180deg, #0a111f 10%, #182639);
 }
 
 body {
@@ -43,6 +67,10 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
+}
+
+* {
+	transition: color 0.1s, background-color 0.1s, border-color 0.1s;
 }
 
 .card {

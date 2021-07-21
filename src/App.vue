@@ -1,5 +1,6 @@
 <template>
-	<div id="app" class="light">
+	<div id="app" :class="`theme-${Store.state.theme}`">
+		<background :theme="Store.state.theme" />
 		<nav class="top-nav">
 			<button
 				:class="{ selected: curTab === 'schedule' }"
@@ -34,6 +35,7 @@ import Schedule from './components/schedule/Schedule.vue';
 import Roster from './components/roster/Roster.vue';
 import { CalendarIcon, UsersIcon, InfoIcon } from 'vue-feather-icons';
 import About from './components/About.vue';
+import Background from './components/background.vue';
 export default {
 	data() {
 		return {
@@ -47,7 +49,15 @@ export default {
 		},
 	},
 	computed: {},
-	components: { Schedule, Roster, CalendarIcon, UsersIcon, InfoIcon, About },
+	components: {
+		Schedule,
+		Roster,
+		CalendarIcon,
+		UsersIcon,
+		InfoIcon,
+		About,
+		Background,
+	},
 };
 </script>
 

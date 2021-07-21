@@ -42,9 +42,6 @@ export default {
 	align-items: center;
 	padding: 2rem 0 2rem;
 
-	// &.today {
-	// 	color: var(--gr7);
-	// }
 	h1 {
 		margin: 0;
 		width: max-content;
