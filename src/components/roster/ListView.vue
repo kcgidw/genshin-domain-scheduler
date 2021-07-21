@@ -1,7 +1,7 @@
 <template>
 	<div class="list-view">
 		<div class="units">
-			<chevron-down-icon class="dropdown" size="1.25x" />
+			<chevron-down-icon class="dropdown-icon" size="1.25x" />
 			<vue-autosuggest
 				id="search-units"
 				class="search"
@@ -33,7 +33,7 @@
 			</list-item>
 		</div>
 		<div class="weapons">
-			<chevron-down-icon class="dropdown" size="1.25x" />
+			<chevron-down-icon class="dropdown-icon" size="1.25x" />
 			<vue-autosuggest
 				id="search-weapons"
 				class="search"
@@ -158,18 +158,17 @@ export default {
 		width: 100%;
 		padding: 8px;
 		border-radius: 3px;
-		// border: solid 2px var(--p3);
 		border: 0;
-		color: var(--p6);
-		background: var(--p1);
+		color: var(--input);
+		background: var(--input-bg);
 
 		&::placeholder {
-			color: var(--p6);
+			color: var(--input);
 			opacity: 0.6;
 		}
 		&:focus {
 			outline: 0;
-			background: var(--p0);
+			background: var(--input-focus-bg);
 		}
 	}
 }
@@ -183,7 +182,7 @@ export default {
 	width: 100%;
 	border: solid 1px;
 	border-radius: 3px;
-	background: var(--p0);
+	background: var(--input-focus-bg);
 	box-shadow: var(--shadow);
 	z-index: 100;
 
@@ -208,7 +207,7 @@ export default {
 	border: 0;
 	outline: 0;
 	background-color: transparent;
-	color: var(--p6);
+	color: var(--input);
 
 	img {
 		height: 2.5rem;
@@ -217,15 +216,15 @@ export default {
 	}
 }
 .autosuggest__results-item--highlighted {
-	background-color: var(--acc0);
+	background-color: var(--input-acc);
 	.suggestion {
-		background-color: var(--acc0);
+		background-color: var(--input-acc);
 	}
 }
-.dropdown {
+.dropdown-icon {
 	position: absolute;
 	pointer-events: none;
-	color: var(--p6);
+	color: var(--input);
 	right: 4px;
 	top: 8px;
 }

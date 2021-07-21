@@ -27,17 +27,37 @@
 	--p6: hsl(245, 28%, 32%);
 	--p7: hsl(245, 28%, 20%);
 	--p8: hsl(245, 28%, 10%);
-	--acc0: hsl(167, 96%, 85%);
-	--acc1: hsl(167, 97%, 75%);
-	--acc2: hsl(167, 97%, 50%);
-	--acc3: hsl(167, 97%, 30%);
-	--acc4: hsl(167, 97%, 15%);
-	--shadow: 0 4px 8px -2px hsla(240, 30%, 5%, 0.4);
+	--acc0: hsl(168, 97%, 85%);
+	--acc1: hsl(168, 97%, 75%);
+	--acc2: hsl(168, 97%, 50%);
+	--acc3: hsl(168, 97%, 30%);
+	--acc4: hsl(168, 97%, 15%);
+	--shadow: 0 4px 8px -2px hsla(240, 80%, 5%, 0.4);
+	--text: var(--p1);
+	--text-strong: var(--p0);
+	--link: var(--acc1);
+	--nav: var(--p3);
+	--nav-acc: var(--p3);
+	--schedule-acc: var(--acc2);
+	--btn-border: var(--p6);
+	--btn-hover-bg: var(--p4);
+	--btn-on-bg: var(--acc1);
+	--btn-on-text: var(--acc4);
+	--btn-on-border: var(--acc3);
+	--card-bg: var(--p5);
+	--card-nav-bg: var(--p7);
+	--card-nav-hover-bg: var(--p6);
+	--x: var(--p7);
+	--input: var(--p6);
+	--input-bg: var(--p1);
+	--input-focus-bg: var(--p0);
+	--input-acc: var(--acc0);
 }
 // bgs must be outside the theme to transition
 .bg-purple {
 	background: hsl(245, 28%, 32%);
 }
+
 .theme-night {
 	--p0: hsl(225, 45%, 95%);
 	--p1: hsl(225, 45%, 83%);
@@ -47,13 +67,32 @@
 	--p5: hsl(225, 25%, 24%);
 	--p6: hsl(225, 25%, 19%);
 	--p7: hsl(225, 25%, 15%);
-	--p8: hsl(225, 25%, 10%);
-	--shadow: 0 4px 8px -2px hsla(220, 30%, 5%, 0.4);
+	--p8: hsl(225, 25%, 9%);
 	--acc0: hsl(158, 96%, 85%);
 	--acc1: hsl(158, 97%, 75%);
 	--acc2: hsl(158, 97%, 50%);
 	--acc3: hsl(158, 97%, 25%);
 	--acc4: hsl(158, 97%, 15%);
+	--shadow: 0 4px 8px -2px hsla(220, 80%, 5%, 0.4);
+	--text: var(--p1);
+	--text-strong: var(--p0);
+	--link: var(--acc1);
+	--nav: var(--p3);
+	--nav-acc: var(--p3);
+	--schedule-acc: var(--acc2);
+	--btn-border: var(--p6);
+	--btn-hover-bg: var(--p4);
+	--btn-on-bg: var(--acc1);
+	--btn-on-text: var(--acc4);
+	--btn-on-border: var(--acc3);
+	--card-bg: var(--p5);
+	--card-nav-bg: var(--p7);
+	--card-nav-hover-bg: var(--p6);
+	--x: var(--p8);
+	--input: var(--p6);
+	--input-bg: var(--p1);
+	--input-focus-bg: var(--p0);
+	--input-acc: var(--acc0);
 }
 .bg-night {
 	background: linear-gradient(180deg, #0a111f 10%, #182639);
@@ -70,14 +109,15 @@ body {
 }
 
 * {
-	transition: color 0.1s, background-color 0.1s, border-color 0.1s;
+	transition: color 0.1s, background-color 0.1s, border-color 0.1s,
+		opacity 0.1s;
 }
 
 .card {
 	box-shadow: var(--shadow);
 	border-radius: 3px;
-	background: var(--p5);
-	color: var(--p1);
+	background: var(--card-bg);
+	color: var(--text);
 	overflow: hidden;
 }
 

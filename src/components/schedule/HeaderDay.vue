@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 .schedule-header-day {
 	&.today {
-		color: var(--acc2);
+		color: var(--schedule-acc);
 	}
 }
 </style>

@@ -39,7 +39,7 @@ export default {
 	flex-direction: column;
 	border-top: solid 4px transparent;
 	&.today {
-		border-top: solid 4px var(--acc2);
+		border-top: solid 4px var(--schedule-acc);
 		position: relative;
 		top: -2px;
 	}

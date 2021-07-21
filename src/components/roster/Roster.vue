@@ -94,7 +94,7 @@ export default {
 	display: flex;
 	flex-direction: row;
 	gap: 8px;
-	background: var(--p7);
+	background: var(--card-nav-bg);
 
 	button.roster-tab {
 		padding: 8px 16px;
@@ -104,14 +104,14 @@ export default {
 		background: transparent;
 		border: 0;
 		border-radius: 3px 3px 0 0;
-		color: var(--p2);
+		color: var(--text);
 		&.selected {
-			color: var(--p0);
-			background: var(--p5);
+			color: var(--text-strong);
+			background: var(--card-bg);
 		}
 		&:hover:not(.selected),
 		&:focus-visible:not(.selected) {
-			background: var(--p6);
+			background: var(--card-nav-hover-bg);
 		}
 
 		svg {

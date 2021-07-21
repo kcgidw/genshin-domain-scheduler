@@ -73,7 +73,6 @@ export default {
 nav {
 	display: flex;
 	flex: 0 0 auto;
-	// background: var(--p8);
 
 	button {
 		margin: 8px;
@@ -85,18 +84,18 @@ nav {
 		background: none;
 		text-transform: uppercase;
 		cursor: pointer;
-		color: var(--p3);
+		color: var(--nav);
 		border-bottom: 2px solid transparent;
 		font-size: 12px;
 
 		&.selected {
-			color: var(--p0);
-			border-bottom: 2px solid var(--p3);
+			color: var(--text-strong);
+			border-bottom: 2px solid var(--nav-acc);
 		}
 
 		&:hover:not(.selected),
 		&:focus-visible:not(.selected) {
-			color: var(--p1);
+			color: var(--text-strong);
 		}
 
 		svg {

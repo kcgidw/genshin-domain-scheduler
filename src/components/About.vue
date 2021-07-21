@@ -26,12 +26,12 @@ export default {};
 	max-width: 50ch;
 	margin: auto;
 	text-align: left;
-	color: var(--p2);
+	color: var(--text);
 	h1 {
-		color: var(--p1);
+		color: var(--text-strong);
 	}
 	a {
-		color: var(--acc1);
+		color: var(--link);
 	}
 }
 </style>

@@ -46,7 +46,7 @@ export default {
 	button {
 		border: 0;
 		background: transparent;
-		color: var(--p7);
+		color: var(--x);
 		&:hover,
 		&:focus-visible {
 			color: var(--red1);

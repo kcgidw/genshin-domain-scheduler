@@ -27,15 +27,15 @@ export default {
 
 <style lang="scss">
 .toggle-btn {
-	background: var(--p5);
-	color: var(--p2);
-	border: solid 2px var(--p6);
+	background: transparent;
+	color: var(--text);
+	border: solid 2px var(--btn-border);
 	border-radius: 6px;
 
 	&.selected {
-		background: var(--acc1);
-		color: var(--acc4);
-		border-color: var(--acc3);
+		color: var(--btn-on-text);
+		background: var(--btn-on-bg);
+		border-color: var(--btn-on-border);
 
 		&:not(.disable-off) {
 			&:hover,
@@ -48,7 +48,7 @@ export default {
 	&:not(.selected) {
 		&:hover,
 		&:focus-visible {
-			background: var(--p4);
+			background: var(--btn-hover-bg);
 		}
 	}
 }
