@@ -75,7 +75,13 @@ import { ChevronDownIcon } from 'vue-feather-icons';
 import { cap } from '../../util';
 
 function genSuggestions(list, qry = '') {
-	const filtered = list.filter((item) => item.name.startsWith(qry));
+	const query = qry.toLowerCase();
+	const filtered = list.filter(item => {
+		return item.name
+			.toLowerCase()
+			.split(' ')
+			.some(word => word.startsWith(query));
+	});
 	return [{ data: filtered }];
 }
 
