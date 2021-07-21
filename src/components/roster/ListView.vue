@@ -75,7 +75,7 @@ import { ChevronDownIcon } from 'vue-feather-icons';
 import { cap } from '../../util';
 
 function genSuggestions(list, qry = '') {
-	const filtered = list.filter(item => item.name.startsWith(qry));
+	const filtered = list.filter((item) => item.name.startsWith(qry));
 	return [{ data: filtered }];
 }
 
@@ -164,7 +164,8 @@ export default {
 		background: var(--p1);
 
 		&::placeholder {
-			color: var(--p5);
+			color: var(--p6);
+			opacity: 0.6;
 		}
 		&:focus {
 			outline: 0;
@@ -182,7 +183,7 @@ export default {
 	width: 100%;
 	border: solid 1px;
 	border-radius: 3px;
-	background: var(--p1);
+	background: var(--p0);
 	box-shadow: var(--shadow);
 	z-index: 100;
 
@@ -224,7 +225,7 @@ export default {
 .dropdown {
 	position: absolute;
 	pointer-events: none;
-	color: var(--p3);
+	color: var(--p6);
 	right: 4px;
 	top: 8px;
 }

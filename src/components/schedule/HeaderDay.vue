@@ -26,11 +26,8 @@ export default {
 
 <style lang="scss" scoped>
 .schedule-header-day {
-	// border-bottom: 2px solid transparent;
 	&.today {
 		color: var(--acc2);
-		// border-bottom: 2px solid var(--acc2);
-		// filter: drop-shadow(0 0 2px var(--acc2));
 	}
 }
 </style>

@@ -2,9 +2,7 @@
 	<div :class="{ 'col card': true, today }">
 		<schedule-header :dayPair="dayPair" />
 		<mat-card v-for="m in mats" :key="m.name" :mat="m" />
-		<div class="no-domains" v-if="!mats.length">
-			No domains
-		</div>
+		<div class="no-domains" v-if="!mats.length">No domains</div>
 	</div>
 </template>
 
@@ -54,8 +52,8 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: var(--p4);
 		font-size: 18px;
+		opacity: 0.6;
 	}
 }
 </style>

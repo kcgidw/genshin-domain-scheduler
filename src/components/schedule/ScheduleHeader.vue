@@ -2,7 +2,7 @@
 	<div :class="{ 'schedule-header': true, today }">
 		<h1>
 			<header-day :dayIndex="days.a" />
-			&nbsp;/&nbsp;
+			<span>&nbsp;/&nbsp;</span>
 			<header-day :dayIndex="days.b" />
 		</h1>
 	</div>
@@ -36,7 +36,6 @@ export default {
 
 <style lang="scss">
 .schedule-header {
-	color: var(--p3);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,6 +45,10 @@ export default {
 		margin: 0;
 		width: max-content;
 		display: flex;
+	}
+
+	span:not(.today) {
+		opacity: 0.6;
 	}
 }
 </style>
