@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss">
 .theme-view {
-	padding: 2rem 1rem;
+	padding: 2rem 2rem;
 	text-align: left;
 }
 .theme-btn {
