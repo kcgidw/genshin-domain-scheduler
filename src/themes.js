@@ -1,1 +1,1 @@
-export default ['purple', 'night'];
+export default ['purple', 'night', 'silver'];

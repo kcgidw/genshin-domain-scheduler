@@ -180,7 +180,6 @@ export default {
 	position: absolute;
 	top: -1px;
 	width: 100%;
-	border: solid 1px;
 	border-radius: 3px;
 	background: var(--input-focus-bg);
 	box-shadow: var(--shadow);

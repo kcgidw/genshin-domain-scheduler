@@ -52,6 +52,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding-bottom: 1rem;
 		font-size: 18px;
 		opacity: 0.6;
 	}

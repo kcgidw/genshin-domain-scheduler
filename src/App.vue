@@ -6,19 +6,19 @@
 				:class="{ selected: curTab === 'schedule' }"
 				@click="clickNav('schedule')"
 			>
-				<calendar-icon size="1.5x" />schedule
+				<calendar-icon size="1.25x" />schedule
 			</button>
 			<button
 				:class="{ selected: curTab === 'roster' }"
 				@click="clickNav('roster')"
 			>
-				<users-icon size="1.5x" />customize
+				<users-icon size="1.25x" />customize
 			</button>
 			<button
 				:class="{ selected: curTab === 'about' }"
 				@click="clickNav('about')"
 			>
-				<info-icon size="1.5x" />about
+				<info-icon size="1.25x" />about
 			</button>
 		</nav>
 		<main>
@@ -86,16 +86,16 @@ nav {
 		cursor: pointer;
 		color: var(--nav);
 		border-bottom: 2px solid transparent;
-		font-size: 12px;
+		font-size: 14px;
 
 		&.selected {
-			color: var(--text-strong);
+			color: var(--nav-on);
 			border-bottom: 2px solid var(--nav-acc);
 		}
 
 		&:hover:not(.selected),
 		&:focus-visible:not(.selected) {
-			color: var(--text-strong);
+			color: var(--nav-on);
 		}
 
 		svg {
