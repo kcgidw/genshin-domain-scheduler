@@ -3,7 +3,7 @@
 	"scripts": {
 		"dev": "webpack serve",
 		"data": "node data/buildData.mjs",
-		"build": "yarn data && webpack"
+		"build": "yarn data && webpack --env production"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.35",
