@@ -1,34 +1,36 @@
-name,talentBook
-albedo,ballad 
-amber,freedom
-barbara,freedom
-beidou,gold 
-bennett,resistance 
-chongyun,diligence 
-diluc,resistance 
-diona,freedom
-eula,resistance
-fischl,ballad 
-ganyu,diligence 
-hu tao,diligence 
-kaeya,ballad 
-kazuha,diligence 
-jean,resistance 
-keqing,prosperity 
-klee,freedom
-lisa,ballad 
-mona,resistance
-ningguang,prosperity 
-noelle,resistance
-qiqi,prosperity 
-razor,resistance
-rosaria,ballad 
-sucrose,freedom
-tartaglia,freedom
-venti,ballad 
-xiangling,diligence 
-xiao,prosperity 
-xingqiu,gold 
-xinyan,gold 
-yanfei,gold 
-zhongli,gold 
+name,talentBook,common,specialty,boss,weekly
+albedo,ballad,scroll,,,
+amber,freedom,arrowhead,,,
+ayaka,elegance,handguard,,,
+barbara,freedom,scroll,,,
+beidou,gold,raven insignia,,,
+bennett,resistance,raven insignia,,,
+chongyun,diligence,mask,,,
+diluc,resistance,fatui insignia,,,
+diona,freedom,arrowhead,,,
+eula,resistance,mask,,,
+fischl,ballad,arrowhead,,,
+ganyu,diligence,nectar,,,
+hu tao,diligence,nectar,,,
+jean,resistance,mask,,,
+kaeya,ballad,raven insignia,,,
+kazuha,diligence,raven insignia,,,
+keqing,prosperity,nectar,,,
+klee,freedom,scroll,,,
+lisa,ballad,slime,,,
+mona,resistance,nectar,,,
+ningguang,prosperity,fatui insignia,,,
+noelle,resistance,mask,,,
+qiqi,prosperity,scroll,,,
+razor,resistance,mask,,,
+rosaria,ballad,fatui insignia,,,
+sucrose,freedom,nectar,,,
+tartaglia,freedom,fatui insignia,,,
+traveler,,mask,,,
+venti,ballad,slime,,,
+xiangling,diligence,slime,,,
+xiao,prosperity,slime,,,
+xingqiu,gold,mask,,,
+xinyan,gold,raven insignia,,,
+yanfei,gold,raven insignia,,,
+zhongli,gold,slime,,,

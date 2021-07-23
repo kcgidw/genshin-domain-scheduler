@@ -44,7 +44,7 @@ export default {
 		top: -2px;
 	}
 	&:not(.today) {
-		opacity: 0.6;
+		opacity: 0.7;
 		box-shadow: none;
 	}
 	.no-domains {

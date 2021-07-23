@@ -1,6 +1,6 @@
 const data = {
 	'forsaken rift': {
-		location: ['springvale', 'mondstadt'],
+		location: 'springvale, mondstadt',
 		type: 'talent',
 		dropSchedule: {
 			mt: 'freedom',
@@ -9,7 +9,7 @@ const data = {
 		},
 	},
 	'taishan mansion': {
-		location: ['jueyun karst', 'liyue'],
+		location: 'jueyun karst, liyue',
 		type: 'talent',
 		dropSchedule: {
 			mt: 'prosperity',
@@ -18,7 +18,7 @@ const data = {
 		},
 	},
 	'cecilia garden': {
-		location: ['springvale', 'mondstadt'],
+		location: 'springvale, mondstadt',
 		type: 'weapon',
 		dropSchedule: {
 			mt: 'decarabian',
@@ -27,12 +27,30 @@ const data = {
 		},
 	},
 	'hidden palace of lianshan formula': {
-		location: ['mingyun village', 'liyue'],
+		location: 'mingyun village, liyue',
 		type: 'weapon',
 		dropSchedule: {
 			mt: 'guyun',
 			tf: 'elixir',
 			ws: 'aerosiderite',
+		},
+	},
+	'violet court': {
+		location: 'kannazuka, inazuma',
+		type: 'talent',
+		dropSchedule: {
+			mt: 'transience',
+			tf: 'elegance',
+			ws: 'light',
+		},
+	},
+	'court of flowing sand': {
+		location: 'narukami island, inazuma',
+		type: 'weapon',
+		dropSchedule: {
+			mt: 'branch of a distant sea',
+			tf: 'narukami',
+			ws: 'mask',
 		},
 	},
 };
