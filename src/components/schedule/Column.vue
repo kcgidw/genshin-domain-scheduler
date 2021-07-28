@@ -1,7 +1,13 @@
 <template>
-	<div :class="{ 'col card': true, today }">
+	<div :class="{ 'schedule-col card': true, today }">
 		<schedule-header :dayPair="dayPair" />
-		<mat-card v-for="m in mats" :key="m.name" :mat="m" />
+		<mat-card
+			v-for="m in mats"
+			:key="m.name"
+			:mat="m"
+			:units="getUnits(m)"
+			:weapons="getWeapons(m)"
+		/>
 		<div class="no-domains" v-if="!mats.length">No domains</div>
 	</div>
 </template>
@@ -9,7 +15,7 @@
 <script>
 import { isDayPairToday } from '../../days';
 import Store from '../../store';
-import MatCard from './MatCard.vue';
+import MatCard from '../MatCard.vue';
 import ScheduleHeader from './ScheduleHeader.vue';
 export default {
 	components: { ScheduleHeader, MatCard },
@@ -28,11 +34,19 @@ export default {
 			return Store.getScheduledMatsForDayPair(this.dayPair);
 		},
 	},
+	methods: {
+		getUnits(matName) {
+			return Store.getSelectedUnitsThatUse('talentBook', matName);
+		},
+		getWeapons(matName) {
+			return Store.getSelectedWeaponsThatUse('ascMat', matName);
+		},
+	},
 };
 </script>
 
 <style lang="scss">
-.col {
+.schedule-col {
 	padding-bottom: 1rem;
 	min-height: 15rem;
 	display: flex;

@@ -101,15 +101,34 @@ const Store = {
 			);
 		});
 	},
-	getSelectedUnitsForBook(book) {
+	getSelectedUnitsThatUse(fieldName, matName) {
 		return this.state.units.filter(n => {
-			return getUnitData(n).talentBook === book;
+			return getUnitData(n)[fieldName] === matName;
 		});
 	},
-	getSelectedWeaponsForMat(matName) {
+	getSelectedWeaponsThatUse(fieldName, matName) {
 		return this.state.weapons.filter(n => {
-			return getWeaponData(n).ascMat === matName;
+			return getWeaponData(n)[fieldName] === matName;
 		});
+	},
+
+	getMatTableData(matType) {
+		const d = {};
+		this.state.units.forEach(uName => {
+			const mat = getUnitData(uName)[matType];
+			if (mat) {
+				d[mat] ??= { units: [], weapons: [] };
+				d[mat].units.push(uName);
+			}
+		});
+		this.state.weapons.forEach(wName => {
+			const mat = getWeaponData(wName)[matType];
+			if (mat) {
+				d[mat] ??= { units: [], weapons: [] };
+				d[mat].weapons.push(wName);
+			}
+		});
+		return d;
 	},
 };
 

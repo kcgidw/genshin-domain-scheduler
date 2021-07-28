@@ -12,23 +12,26 @@
 					:name="u"
 					:key="u"
 				/>
-				<ul class="mat-card-weapons" v-if="weapons.length">
-					<li class="mat-card-weapon" v-for="w in weapons" :key="w">
-						{{ cap(w) }}
-					</li>
-				</ul>
 			</div>
+			<div class="space" v-if="units.length && weapons.length"></div>
+			<ul class="mat-card-weapons" v-if="weapons.length">
+				<li class="mat-card-weapon" v-for="w in weapons" :key="w">
+					{{ cap(w) }}
+				</li>
+			</ul>
 		</div>
 	</div>
 </template>
 
 <script>
-import Store from '../../store';
-import AssetImage from '../AssetImage.vue';
-import { cap } from '../../util';
+import Store from '../store';
+import AssetImage from './AssetImage.vue';
+import { cap } from '../util';
 export default {
 	props: {
 		mat: String,
+		units: Array,
+		weapons: Array,
 	},
 	data() {
 		return {
@@ -38,14 +41,6 @@ export default {
 	methods: {
 		cap(str) {
 			return cap(str);
-		},
-	},
-	computed: {
-		units() {
-			return Store.getSelectedUnitsForBook(this.mat);
-		},
-		weapons() {
-			return Store.getSelectedWeaponsForMat(this.mat);
 		},
 	},
 	components: { AssetImage },
@@ -75,6 +70,9 @@ export default {
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 6px;
+		img {
+			image-rendering: -webkit-optimize-contrast;
+		}
 	}
 	&-unit {
 		height: 2rem;
@@ -95,5 +93,8 @@ export default {
 		margin-bottom: 6px;
 		text-align: left;
 	}
+}
+.space {
+	height: 12px;
 }
 </style>

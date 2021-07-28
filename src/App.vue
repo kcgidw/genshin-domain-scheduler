@@ -9,6 +9,12 @@
 				<calendar-icon size="1.25x" />schedule
 			</button>
 			<button
+				:class="{ selected: curTab === 'materials' }"
+				@click="clickNav('materials')"
+			>
+				<book-icon size="1.25x" />materials
+			</button>
+			<button
 				:class="{ selected: curTab === 'roster' }"
 				@click="clickNav('roster')"
 			>
@@ -23,6 +29,7 @@
 		</nav>
 		<main>
 			<schedule v-show="curTab === 'schedule'" />
+			<materials v-show="curTab === 'materials'" />
 			<roster v-show="curTab === 'roster'" />
 			<about v-show="curTab === 'about'" />
 		</main>
@@ -33,9 +40,10 @@
 import Store from './store';
 import Schedule from './components/schedule/Schedule.vue';
 import Roster from './components/roster/Roster.vue';
-import { CalendarIcon, UsersIcon, InfoIcon } from 'vue-feather-icons';
+import { CalendarIcon, BookIcon, UsersIcon, InfoIcon } from 'vue-feather-icons';
 import About from './components/About.vue';
 import Background from './components/Background.vue';
+import Materials from './components/materials/Materials.vue';
 export default {
 	data() {
 		return {
@@ -53,10 +61,12 @@ export default {
 		Schedule,
 		Roster,
 		CalendarIcon,
+		BookIcon,
 		UsersIcon,
 		InfoIcon,
 		About,
 		Background,
+		Materials,
 	},
 };
 </script>

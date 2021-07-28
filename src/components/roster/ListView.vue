@@ -229,8 +229,9 @@ export default {
 .dropdown-icon {
 	position: absolute;
 	pointer-events: none;
-	color: var(--input);
 	right: 4px;
 	top: 8px;
+	color: var(--input);
+	opacity: 0.6;
 }
 </style>

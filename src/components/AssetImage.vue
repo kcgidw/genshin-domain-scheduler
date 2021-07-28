@@ -1,5 +1,5 @@
 <template>
-	<img class="asset-img" :src="images[name]" v-if="images[name]" />
+	<img class="asset-img" :src="images[name]" v-if="images[name]" :alt="name"/>
 </template>
 
 <script>

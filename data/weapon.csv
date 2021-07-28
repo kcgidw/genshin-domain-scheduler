@@ -1,116 +1,117 @@
-name,ascMat,common
-alley hunter,boreal wolf,slime
-amos' bow,dandelion gladiator,slime
-apprentice's notes,decarabian,hilichurl mask
-aquila favonia,decarabian,
-beginner's protector,dandelion gladiator,
-black tassel,aerosiderite,
-blackcliff agate,guyun,
-blackcliff longsword,guyun,
-blackcliff slasher,elixir,
-blackcliff warbow,guyun,
-bloodtainted greatsword,boreal wolf,
-compound bow,aerosiderite,
-cool steel,decarabian,
-crescent pike,guyun,
-dark iron sword,guyun,hilichurl mask
-deathmatch,boreal wolf,
-debate club,elixir,hilichurl mask
-dodoco tales,boreal wolf,hilichurl mask
-dragon's bane,elixir,
-dragonspine spear,boreal wolf,
-dull blade,decarabian,
-elegy for the end,boreal wolf,
-emerald orb,guyun,
-eye of perception,elixir,hilichurl mask
-favonius codex,decarabian,
-favonius greatsword,dandelion gladiator,
-favonius lance,dandelion gladiator,slime
-favonius sword,decarabian,
-favonius warbow,dandelion gladiator,
-ferrous shadow,decarabian,
-festering desire,dandelion gladiator,
-fillet blade,elixir,
-freedom-sworn,dandelion gladiator,
-frostbearer,dandelion gladiator,
-halberd,elixir,
-harbinger of dawn,boreal wolf,slime
-hunter's bow,boreal wolf,
-iron point,dandelion gladiator,
-iron sting,aerosiderite,
-lion's roar,guyun,
-lithic blade,guyun,
-lithic spear,aerosiderite,
-lost prayer to the sacred winds,dandelion gladiator,slime
-magic guide,decarabian,slime
-mappa mare,aerosiderite,slime
-memory of dust,aerosiderite,hilichurl mask
-messenger,elixir,
-mitternachts waltz,decarabian,
-old merc's pal,boreal wolf,slime
-otherworldly story,dandelion gladiator,hilichurl mask
-pocket grimoire,decarabian,hilichurl mask
-primordial jade cutter,elixir,
-primordial jade winged-spear,guyun,
-prototype amber,elixir,
-prototype archaic,aerosiderite,hilichurl mask
-prototype crescent,elixir,
-prototype rancour,elixir,
-prototype starglitter,aerosiderite,hilichurl mask
-rainslasher,elixir,
-raven bow,decarabian,
-recurve bow,dandelion gladiator,
-royal bow,dandelion gladiator,slime
-royal greatsword,dandelion gladiator,slime
-royal grimoire,decarabian,
-royal longsword,decarabian,
-royal spear,elixir,
-rust,guyun,hilichurl mask
-sacrificial bow,boreal wolf,slime
-sacrificial fragments,dandelion gladiator,
-sacrificial greatsword,boreal wolf,
-sacrificial sword,dandelion gladiator,
-seasoned hunter's bow,boreal wolf,
-serpent spine,aerosiderite,
-sharpshooter's oath,boreal wolf,slime
-silver sword,decarabian,
-skyrider greatsword,aerosiderite,
-skyrider sword,aerosiderite,
-skyward atlas,boreal wolf,
-skyward blade,boreal wolf,slime
-skyward harp,boreal wolf,
-skyward pride,boreal wolf,slime
-skyward spine,dandelion gladiator,
-slingshot,guyun,hilichurl mask
-snow-tombed starsilver,decarabian,slime
-solar pearl,guyun,
-staff of homa,aerosiderite,slime
-summit shaper,guyun,hilichurl mask
-sword of descension,boreal wolf,
-the alley flash,decarabian,
-the bell,decarabian,
-the black sword,boreal wolf,slime
-the flute,boreal wolf,slime
-the stringless,decarabian,
-the unforged,elixir,
-the viridescent hunt,decarabian,
-the widsith,boreal wolf,hilichurl mask
-thrilling tales of dragon slayers,boreal wolf,
-traveler's handy sword,dandelion gladiator,
-twin nephrite,elixir,
-vortex vanquisher,aerosiderite,
-waster greatsword,boreal wolf,slime
-white iron greatsword,dandelion gladiator,slime
-white tassel,guyun,
-whiteblind,guyun,
-windblume ode,dandelion gladiator,
-wine and song,boreal wolf,
-wolf's gravestone,dandelion gladiator,
-amenoma kageuchi,branch of a distant sea,
-mistsplitter reforged,branch of a distant sea,
-thundering pulse,narukami,arrowhead
-hamayumi,narukami,
-kitain cross spear,mask,
-katsuragikiri nagamasa,narukami,
-hakushin ring,branch of a distant sea,
-song of broken pines,decarabian,hilichurl mask
+name,ascMat,common,elite
+alley hunter,boreal wolf,slime,chaos part
+amenoma kageuchi,branch of a distant sea,handguard,chaos (sentinel)
+amos' bow,dandelion gladiator,slime,chaos part
+apprentice's notes,decarabian,hilichurl mask,horn
+aquila favonia,decarabian,arrowhead,horn
+beginner's protector,dandelion gladiator,scroll,chaos part
+black tassel,aerosiderite,arrowhead,bone shard
+blackcliff agate,guyun,scroll,sacrificial knife
+blackcliff longsword,guyun,arrowhead,sacrificial knife
+blackcliff pole,elixir,fatui insignia,mist grassmist grass
+blackcliff slasher,elixir,fatui insignia,mist grassmist grass
+blackcliff warbow,guyun,nectar,sacrificial knife
+bloodtainted greatsword,boreal wolf,arrowhead,ley line
+compound bow,aerosiderite,fatui insignia,bone shard
+cool steel,decarabian,arrowhead,horn
+crescent pike,guyun,raven insignia,sacrificial knife
+dark iron sword,guyun,hilichurl mask,sacrificial knife
+deathmatch,boreal wolf,nectar,ley line
+debate club,elixir,hilichurl mask,mist grass
+dodoco tales,boreal wolf,hilichurl mask,ley line
+dragon's bane,elixir,scroll,mist grass
+dragonspine spear,boreal wolf,fatui insignia,mist grass
+dull blade,decarabian,arrowhead,horn
+elegy for the end,boreal wolf,fatui insignia,horn
+emerald orb,guyun,raven insignia,sacrificial knife
+eye of perception,elixir,hilichurl mask,mist grass
+favonius codex,decarabian,scroll,horn
+favonius greatsword,dandelion gladiator,fatui insignia,chaos part
+favonius lance,dandelion gladiator,slime,chaos part
+favonius sword,decarabian,arrowhead,horn
+favonius warbow,dandelion gladiator,nectar,chaos part
+ferrous shadow,decarabian,nectar,horn
+festering desire,dandelion gladiator,fatui insignia,horn
+fillet blade,elixir,raven insignia,mist grass
+freedom-sworn,dandelion gladiator,scroll,chaos part
+frostbearer,dandelion gladiator,nectar,chaos part
+hakushin ring,branch of a distant sea,scroll,chaos (sentinel)
+halberd,elixir,nectar,mist grass
+hamayumi,narukami,,
+harbinger of dawn,boreal wolf,slime,ley line
+hunter's bow,boreal wolf,raven insignia,ley line
+iron point,dandelion gladiator,scroll,chaos part
+iron sting,aerosiderite,nectar,bone shard
+katsuragikiri nagamasa,narukami,handguard,chaos (sentinel)
+kitain cross spear,mask,raven insignia,chaos (sentinel)
+lion's roar,guyun,raven insignia,sacrificial knife
+lithic blade,guyun,arrowhead,sacrificial knife
+lithic spear,aerosiderite,arrowhead,bone shard
+lost prayer to the sacred winds,dandelion gladiator,slime,chaos part
+magic guide,decarabian,slime,horn
+mappa mare,aerosiderite,slime,bone shard
+memory of dust,aerosiderite,hilichurl mask,bone shard
+messenger,elixir,raven insignia,mist grass
+mistsplitter reforged,branch of a distant sea,handguard,chaos (sentinel)
+mitternachts waltz,decarabian,raven insignia,horn
+old merc's pal,boreal wolf,slime,ley line
+otherworldly story,dandelion gladiator,hilichurl mask,chaos part
+pocket grimoire,decarabian,hilichurl mask,horn
+primordial jade cutter,elixir,raven insignia,mist grass
+primordial jade winged-spear,guyun,fatui insignia,sacrificial knife
+prototype amber,elixir,arrowhead,mist grass
+prototype archaic,aerosiderite,hilichurl mask,bone shard
+prototype crescent,elixir,raven insignia,mist grass
+prototype rancour,elixir,fatui insignia,mist grass
+prototype starglitter,aerosiderite,hilichurl mask,bone shard
+rainslasher,elixir,scroll,mist grass
+raven bow,decarabian,arrowhead,horn
+recurve bow,dandelion gladiator,scroll,chaos part
+royal bow,dandelion gladiator,slime,chaos part
+royal greatsword,dandelion gladiator,slime,chaos part
+royal grimoire,decarabian,fatui insignia,horn
+royal longsword,decarabian,arrowhead,horn
+royal spear,elixir,fatui insignia,mist grass
+rust,guyun,hilichurl mask,sacrificial knife
+sacrificial bow,boreal wolf,slime,ley line
+sacrificial fragments,dandelion gladiator,raven insignia,chaos part
+sacrificial greatsword,boreal wolf,arrowhead,ley line
+sacrificial sword,dandelion gladiator,scroll,chaos part
+seasoned hunter's bow,boreal wolf,raven insignia,ley line
+serpent spine,aerosiderite,nectar,bone shard
+sharpshooter's oath,boreal wolf,slime,ley line
+silver sword,decarabian,arrowhead,horn
+skyrider greatsword,aerosiderite,raven insignia,bone shard
+skyrider sword,aerosiderite,fatui insignia,bone shard
+skyward atlas,boreal wolf,arrowhead,ley line
+skyward blade,boreal wolf,slime,ley line
+skyward harp,boreal wolf,arrowhead,ley line
+skyward pride,boreal wolf,slime,ley line
+skyward spine,dandelion gladiator,scroll,chaos part
+slingshot,guyun,hilichurl mask,sacrificial knife
+snow-tombed starsilver,decarabian,slime,horn
+solar pearl,guyun,nectar,sacrificial knife
+song of broken pines,decarabian,hilichurl mask,horn
+staff of homa,aerosiderite,slime,ley line
+summit shaper,guyun,hilichurl mask,sacrificial knife
+sword of descension,boreal wolf,raven insignia,ley line
+the alley flash,decarabian,scroll,horn
+the bell,decarabian,nectar,horn
+the black sword,boreal wolf,slime,ley line
+the flute,boreal wolf,slime,ley line
+the stringless,decarabian,arrowhead,horn
+the unforged,elixir,raven insignia,mist grass
+the viridescent hunt,decarabian,arrowhead,horn
+the widsith,boreal wolf,hilichurl mask,ley line
+thrilling tales of dragon slayers,boreal wolf,scroll,ley line
+thundering pulse,narukami,arrowhead,
+traveler's handy sword,dandelion gladiator,scroll,chaos part
+twin nephrite,elixir,fatui insignia,mist grass
+vortex vanquisher,aerosiderite,raven insignia,bone shard
+waster greatsword,boreal wolf,slime,ley line
+white iron greatsword,dandelion gladiator,slime,chaos part
+white tassel,guyun,fatui insignia,sacrificial knife
+whiteblind,guyun,raven insignia,sacrificial knife
+windblume ode,dandelion gladiator,nectar,ley line
+wine and song,boreal wolf,scroll,ley line
+wolf's gravestone,dandelion gladiator,scroll,chaos part
