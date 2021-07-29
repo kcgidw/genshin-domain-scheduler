@@ -61,10 +61,5 @@ export default {
 		text-align: center;
 		padding: 2rem 0 2rem;
 	}
-
-	.mat-card {
-		border-top: solid 1px var(--separator);
-		padding: 24px 20px;
-	}
 }
 </style>

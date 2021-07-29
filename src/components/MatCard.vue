@@ -52,7 +52,7 @@ export default {
 	display: flex;
 	flex-direction: row;
 	gap: 16px;
-	padding: 20px;
+	padding: 1rem;
 
 	.mat-img {
 		height: 4rem;
@@ -95,6 +95,6 @@ export default {
 	}
 }
 .space {
-	height: 12px;
+	height: 8px;
 }
 </style>
