@@ -1,8 +1,18 @@
 # Genshin Domain Scheduler
 
-Dead-simple personalized domain schedules for Genshin Impact.
+Clean, customizable material references for Genshin Impact
 
-Data update/correction PRs very welcome!
+-   Dead-simple interface
+-   Domain schedule sheet
+-   Overworld drops sheet
+-   Customizable roster
+-   Themes
+
+Data and asset PRs are very welcome!
+
+![](readme-assets/1.png)
+![](readme-assets/2.png)
+![](readme-assets/3.png)
 
 ## Scripts
 
