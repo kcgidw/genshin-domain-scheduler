@@ -54,7 +54,7 @@
 	--input-focus-bg: var(--p0);
 	--input-acc: var(--acc0);
 	// --table-border: var(--p4);
-	--separator: var(--p6);
+	// --separator: var(--p6);
 }
 // bgs must be outside the theme to transition
 .bg-purple {
@@ -98,7 +98,7 @@
 	--input-focus-bg: var(--p0);
 	--input-acc: var(--acc0);
 	// --table-border: var(--p4);
-	--separator: var(--p6);
+	// --separator: var(--p6);
 }
 .bg-night {
 	background: linear-gradient(180deg, #0a111f 10%, #182639);
@@ -141,7 +141,7 @@
 	--input-focus-bg: white;
 	--input-acc: var(--acc0);
 	// --table-border: var(--p4);
-	--separator: var(--p2);
+	// --separator: var(--p2);
 }
 .bg-silver {
 	background: hsl(235, 15%, 95%);

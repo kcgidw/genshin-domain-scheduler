@@ -40,16 +40,16 @@ export default {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 1rem;
-	padding: 2rem 1rem;
-
-	@media screen and (max-width: 800px) {
-		padding: 8px;
-	}
+	padding: 8px;
 
 	.materials {
-		display: flex;
-		gap: 2rem;
+		margin: 8px;
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: repeat(3, minmax(15rem, 1fr));
+		gap: 1rem;
+		width: 100%;
+		max-width: 65rem;
 	}
 }
 </style>

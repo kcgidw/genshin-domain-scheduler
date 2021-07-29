@@ -53,8 +53,6 @@ export default {
 }
 
 .mat-table-container {
-	max-width: 50rem;
-	min-width: 25rem;
 	text-align: left;
 
 	h1 {

@@ -76,7 +76,7 @@ export default {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 32px 16px;
+	padding: 32px 8px;
 
 	@media screen and (max-width: 800px) {
 		padding: 8px;

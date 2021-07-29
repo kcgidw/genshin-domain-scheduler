@@ -42,15 +42,15 @@ export default {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding: 8px;
 }
 .schedule {
-	margin: 8px;
 	display: grid;
 	grid-auto-flow: column;
 	grid-template-columns: repeat(3, minmax(15rem, 1fr));
 	grid-gap: 1rem;
 	width: 100%;
-	max-width: 60rem;
+	max-width: 65rem;
 }
 .sunday {
 	padding: 1rem 2rem;
