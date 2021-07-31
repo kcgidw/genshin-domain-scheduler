@@ -12,7 +12,7 @@ const importAll = req => {
 		images[imageName] = req(key).default;
 	});
 };
-importAll(require.context('../assets', false, /\.(png|webp)$/));
+importAll(require.context('/static', false, /\.(png|webp)$/));
 
 export default {
 	props: {
